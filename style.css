@@ -311,6 +311,9 @@ section {
   letter-spacing: 4px;
   text-transform: uppercase;
 }
+.benefit-header {
+  margin-top: 30px;
+}
 .sub-section-content h3, .benefit-header h3{
   font-size: 1.15rem;
   line-height: 1.75;
@@ -538,7 +541,7 @@ section {
 .blue-text{
   color: var(--bluefont-bg);
 }
-.half {
+.half, .half-top, .half-bottom {
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -546,14 +549,7 @@ section {
   justify-content: center;
   align-items: left;
 }
-.half-top {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  height: 100%;
-  justify-content: top;
-  align-items: left;
-}
+
 .hero-text{
   font-size: 4rem;
   letter-spacing: 2;
@@ -1666,6 +1662,9 @@ footer h6 {
 .about-summary p{
   line-height: 1.5;
 }
+#about-text-cta {
+  min-width: 350px;
+}
 
 .site-map {
   display: flex;
@@ -1825,14 +1824,12 @@ Section 7: Testing Step container
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 500px;
-  min-width: 300px;
+
   height: 400px;
   min-height: 200px;
 }
 
 #process{
-  min-width: 450px;
   min-height: 475px;
 }
 .processes {
@@ -2124,9 +2121,21 @@ Section 8: Media Devices Content Styling
   .half-container {
     flex-direction: column;
   }
-  .half, .half-top {
+  .half {
     flex-direction: column;
     height:50%;
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  .half-top {
+    flex-direction: column;
+    height:40%;
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  .half-bottom {
+    flex-direction: column;
+    height:60%;
     width: 100%;
     padding-bottom: 10px;
   }
@@ -2187,6 +2196,7 @@ Section 8: Media Devices Content Styling
 
   .left {
     padding-left: 20px;
+
   }
   .right {
     padding-right: 20px;
@@ -2279,6 +2289,14 @@ Section 8: Media Devices Content Styling
   .half-img {
     height: 375px;
     width: 275px;
+  }
+  
+  .left {
+    padding-left: 5px;
+    
+  }
+  .right {
+    padding-right: 5px;
   }
 }
 
