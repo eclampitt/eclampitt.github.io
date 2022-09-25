@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<!--Project Head-->
+<head>
+    <!-- Specify the character encoding for the HTML document-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Place the meta description text here.">
+    <meta name=”robots” content="index, follow">
+
+    <link rel="stylesheet" href="style.css">
+    <!--Link Social Icons-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <title>Emily Clampitt</title>
+    <!--Import Web Fonts-->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=La+Belle+Aurore&family=Montserrat:wght@400;500;700&family=Pacifico&family=Raleway:wght@400;500;700&family=Roboto+Mono:wght@400;500;700&display=swap');
+
+      @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Barlow+Condensed:wght@400;500;700&family=IBM+Plex+Sans+Condensed:wght@400;500;700&display=swap');
+    </style>
+    <!--Import FA Icons-->
+    <script src="https://kit.fontawesome.com/baab76043c.js" crossorigin="anonymous"></script>
+    <!--Import JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+
+
+<body>
+
+<header>
+
+    <nav class="Top-Nav">
+      <div class="Top-Content">
+      <a href="./index.html" class="logo">Logo</a>
+        <div class="Top-Menu">
+          <a href="./about.html">About</a>
+          <a href="./portfolio.html">Portfolio</a>
+          <div class="dropdown">
+            <button class="dropbtn"  onclick="droptoggle(); navcolorchange();">Services
+              <i class="fa-solid fa-angle-down" id="carat"></i>
+            </button>
+                <div class="dropdown-content" id="droptop">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
+          </div>
+          <a href="./contact.html">Contact</a>
+      </div>
+      
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+
+        <div class="Side-Nav">
+          <div class="Side-Menu">
+            <a href="./about.html">About</a>
+            <a href="./portfolio.html">Portfolio</a>
+            <div class="dropdown">
+              <button class="dropbtn"  onclick="droptoggle(); navcolorchange();">Services
+                <i class="fa-solid fa-angle-down" id="carat2"></i>
+              </button>
+                  <div class="dropdown-content-side" id="droptop-side">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                  </div>
+            </div>
+            <a href="./contact.html">Contact</a>
+            <a href="./testimonial .html">Testimonial</a>
+          </div>
+        </div>
+    </nav>
+  </header>
+
+<main>
+
+
+  <section id="main4">
+    <div class="cards"> 
+    <!--   card 1 -->
+    <div class="card">
+      <picture class="thumbnail">
+           <img src="https://abbeyjfitzgerald.com/wp-content/uploads/2018/01/cloud.svg" alt="" />
+      </picture>
+      <div class="card-content">
+        <p class="category">Service</p>
+        <h2>Strategy</h2>
+        <p>
+          We define your competition and target audience. Discover what is working in your online industry, then design your website accordingly.</p>
+     </div>
+    </div>
+    <!--   card 2 -->
+    <div class="card">
+      <picture class="thumbnail">
+           <img class="category__01" src="https://abbeyjfitzgerald.com/wp-content/uploads/2018/01/camera-1.svg" alt="" />
+      </picture>
+      <div class="card-content">
+        <p class="category">Service</p>
+        <h2>Design</h2>
+        <p>Color scheme, layout, sitemap, and style. We will bring your brand to life with a one of a kind masterpiece, built just for you.</p>
+    </div>
+    <!--   card 3 -->
+    <div class="card">
+      <picture class="thumbnail">
+           <img class="category__03" src="https://abbeyjfitzgerald.com/wp-content/uploads/2018/01/list-1.svg" alt="" />
+      </picture>
+      <div class="card-content">
+        <p class="category">Service</p>
+        <h2>Header</h2>
+        <p>TUX re-inventing the wheel, and move the needle. Feature creep dogpile that but diversify kpis but market-facing.</p>
+     </div>
+    </div>
+    <!--   card 4 -->
+    <div class="card">
+      <picture class="thumbnail">
+           <img class="category__04" src="https://abbeyjfitzgerald.com/wp-content/uploads/2017/10/browser-icon-01.svg" alt="" />
+      </picture>
+      <div class="card-content">
+        <p class="category">Service</p>
+        <h2>Header</h2>
+        <p>TUX re-inventing the wheel, and move the needle. Feature creep dogpile that but diversify kpis but market-facing.</p>
+     </div>
+    </div>
+    <!--   card 5 -->
+    <div class="card">
+      <picture class="thumbnail">
+           <img class="category__02" src="https://abbeyjfitzgerald.com/wp-content/uploads/2018/01/camera-1.svg" alt="" />
+      </picture>
+      <div class="card-content">
+        <p class="category">Service</p>
+        <h2>Header</h2>
+        <p>TUX re-inventing the wheel, and move the needle. Feature creep dogpile that but diversify kpis but market-facing.</p>
+     </div>
+    </div>
+    <!--   card 6 -->
+    <div class="card">
+      <picture class="thumbnail">
+           <img class="category__01" src="https://abbeyjfitzgerald.com/wp-content/uploads/2018/01/cloud.svg" alt="" />
+      </picture>
+      <div class="card-content">
+        <p class="category">Service</p>
+        <h2>Header</h2>
+        <p>TUX re-inventing the wheel, and move the needle. Feature creep dogpile that but diversify kpis but market-facing.</p>
+     </div>
+    </div>
+    </div> 
+      </section>
+
+      <section id="prices">
+
+        <div class="container">
+    
+        <div class="price-box">
+          <h2>Standard + Blogging</h2>
+          <span>STARTING AT</span>
+          <h3>300</h3>
+          <ul>
+              <li><img aria-hidden="true" src="https://d33wubrfki0l68.cloudfront.net/608a680adbcdbdfc5b0db51ce6104719aaf2b24b/7080e/images/tick.svg" alt=""> 1000+ Word Post</li>
+              <li><img aria-hidden="true" src="https://d33wubrfki0l68.cloudfront.net/608a680adbcdbdfc5b0db51ce6104719aaf2b24b/7080e/images/tick.svg" alt=""> Written By an SEO Specialist</li>
+              <li><img aria-hidden="true" src="https://d33wubrfki0l68.cloudfront.net/608a680adbcdbdfc5b0db51ce6104719aaf2b24b/7080e/images/tick.svg" alt=""> 1 Post Per Month</li>
+              <li><img aria-hidden="true" src="https://d33wubrfki0l68.cloudfront.net/608a680adbcdbdfc5b0db51ce6104719aaf2b24b/7080e/images/tick.svg" alt=""> $150 Per Extra Post</li>
+          </ul>
+          <button class="button-solid services-button" onclick="location.href='/html/contact.html'" type="button">
+              CONTACT US
+          </button>
+      </div>
+    
+      <div class="price-box">
+        <h2>Standard </h2>
+        <span>STARTING AT</span>
+        <h3>150</h3>
+        <ul>
+            <li><img aria-hidden="true" src="https://d33wubrfki0l68.cloudfront.net/608a680adbcdbdfc5b0db51ce6104719aaf2b24b/7080e/images/tick.svg" alt=""> 1000+ Word Post</li>
+            <li><img aria-hidden="true" src="https://d33wubrfki0l68.cloudfront.net/608a680adbcdbdfc5b0db51ce6104719aaf2b24b/7080e/images/tick.svg" alt=""> Written By an SEO Specialist</li>
+            <li><img aria-hidden="true" src="https://d33wubrfki0l68.cloudfront.net/608a680adbcdbdfc5b0db51ce6104719aaf2b24b/7080e/images/tick.svg" alt=""> 1 Post Per Month</li>
+            <li><img aria-hidden="true" src="https://d33wubrfki0l68.cloudfront.net/608a680adbcdbdfc5b0db51ce6104719aaf2b24b/7080e/images/tick.svg" alt=""> $150 Per Extra Post</li>
+        </ul>
+        <button class="button-solid services-button" onclick="location.href='/html/contact.html'" type="button">
+            CONTACT US
+        </button>
+    </div>
+    
+    <div class="price-box">
+      <h2>Standard </h2>
+      <span>STARTING AT</span>
+      <h3>150</h3>
+      <ul>
+          <li><img aria-hidden="true" src="https://d33wubrfki0l68.cloudfront.net/608a680adbcdbdfc5b0db51ce6104719aaf2b24b/7080e/images/tick.svg" alt=""> 1000+ Word Post</li>
+          <li><img aria-hidden="true" src="https://d33wubrfki0l68.cloudfront.net/608a680adbcdbdfc5b0db51ce6104719aaf2b24b/7080e/images/tick.svg" alt=""> Written By an SEO Specialist</li>
+          <li><img aria-hidden="true" src="https://d33wubrfki0l68.cloudfront.net/608a680adbcdbdfc5b0db51ce6104719aaf2b24b/7080e/images/tick.svg" alt=""> 1 Post Per Month</li>
+          <li><img aria-hidden="true" src="https://d33wubrfki0l68.cloudfront.net/608a680adbcdbdfc5b0db51ce6104719aaf2b24b/7080e/images/tick.svg" alt=""> $150 Per Extra Post</li>
+      </ul>
+      <button class="button-solid services-button" onclick="location.href='/html/contact.html'" type="button">
+          CONTACT US
+      </button>
+    </div>
+    
+    </div>
+        
+      </section>
+
+
+
+
+
+
+
+
+ </main> 
+
+<!--Project Footer-->
+<footer>
+  <div class="footer-content">
+    <div class="social">
+        <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a>
+        <a href="https://linkedin.com/"><i class="fab fa-linkedin"></i></a>
+        <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+        <a href="https://linkedin.com/"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/"><i class="fab fa-youtube"></i></a>
+    </div>
+     <h3>©Company 2022</h3>
+  </div>
+</footer>
+<script src="/Users/eclampitt/Desktop/Documents/Code_Academy/Emily/BlueHound/Test/js/testjava.js"></script>
+
+
+</body>
+</html>
