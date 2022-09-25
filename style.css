@@ -97,6 +97,7 @@ p *{
 }
 .giant-header {
   font-size: 6rem;
+  padding: 20px 0px;
 }
 
 /************************************
@@ -273,6 +274,7 @@ Section 5: Main
 ************************************/
 section {
   height: 100vh;
+  width: 100%;
 }
 .sub-section {
   height: 35vh;
@@ -1168,8 +1170,8 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
 .service {
   margin: 0 auto;
   grid-column: span 1;
-  height: 400px;
-  width: 300px;
+  height: 300px;
+  width: 275px;
   box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.2); /* offset-x | offset-y | blur-radius | spread-radius | color */
   border-radius: 5px;
   background-color: var(--lightfont-bg);
@@ -1182,7 +1184,10 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   line-height: 1.5;
 }
 .service-info-txt{
-  height: 180px;
+  height: 230px;
+}
+.service-info-txt h3{
+  height: 70px;
 }
 .customer-info {
   display: flex;
@@ -1820,8 +1825,8 @@ Section 7: Testing Step container
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width:600px;
-  min-width: 350px;
+  width: 500px;
+  min-width: 300px;
   height: 400px;
   min-height: 200px;
 }
@@ -2177,7 +2182,7 @@ Section 8: Media Devices Content Styling
   }
 
   .giant-header{
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   .left {
