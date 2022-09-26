@@ -2008,7 +2008,7 @@ Section 8: Media Devices Content Styling
 @media screen and (max-width: 640px)
 {
     body, html{
-        width: 100vw;
+    
         overflow-x: hidden;
         padding: 0.8em 0;
     }
