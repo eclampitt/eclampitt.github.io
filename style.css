@@ -99,6 +99,9 @@ p *{
   font-size: 6rem;
   padding: 20px 0px;
 }
+body {
+  overflow-x: hidden;
+}
 
 /************************************
 Section 4: Header
@@ -129,12 +132,12 @@ nav {
 
 .Top-Content {
     display: flex;
-    width: 93%;
+    width: 100%;
     justify-content: space-between;
 }
 
 .Top-Menu {
-    padding-right: 10px;
+    padding-right: 20px;
 }
 
 .Top-Menu a, .Top-Menu i, .dropdown{
@@ -704,10 +707,8 @@ Section 5: Main
   width: 100%;
   height: 100%;
 }
-#above-arrow-content{
-  margin-bottom: 50px;
-}
 .scroll-container {
+  margin-top: 100px;
   margin: 0 auto;
   display: block;
   height: 75px;
@@ -2253,7 +2254,6 @@ Section 8: Media Devices Content Styling
   .menu-btn {
     display: flex;
   }
-
   .product-list {
     grid-template-columns: repeat(1, 1fr); 
     grid-template-rows: repeat(auto, 1fr); 
