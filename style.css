@@ -99,9 +99,7 @@ p *{
   font-size: 6rem;
   padding: 20px 0px;
 }
-body {
-  overflow-x: hidden;
-}
+
 
 /************************************
 Section 4: Header
@@ -117,6 +115,7 @@ nav {
   width: 100%;
   z-index: 1000;
   overflow-x: hidden;
+  top: 0px;
 }
 
 .logo {
@@ -128,9 +127,6 @@ nav {
 
 .Top-Nav {
     position: fixed;
-    width: 90%;
-    margin: 0 auto;
-
 }
 
 .Top-Content {
@@ -146,7 +142,7 @@ nav {
 .Top-Menu a, .Top-Menu i, .dropdown{
     color: inherit;
     text-decoration: none;
-    margin-right:10px;
+    padding-right:10px;
 }
 
 .Top-Menu a:hover, .Top-Menu i:hover, .logo:hover, .dropdown button:hover {
@@ -313,9 +309,7 @@ section {
   width: 100%;
   padding: 0 10px;
 }
-.sub-section-txt{
-  margin: 0 15%;
-}
+
 .sub-section-txt h3{
   min-width: 300px;
 }
@@ -512,6 +506,9 @@ section {
 .top {
   padding-top: 50px;
 }
+.bottom {
+  padding-bottom: 200px;
+}
 .margin-top-bottom {
   margin: 150px 0px;
 }
@@ -629,7 +626,7 @@ Section 5: Main
 ************************************/
 .mainimg {
   height: 100%;
-  min-width: 400px;
+  width: 100%;
   object-fit: contain;
 }
 
@@ -935,6 +932,9 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   bottom: 0px;
   right: 30px;
   z-index: -3;
+}
+#about-cta {
+  height: fit-content;
 }
 .parallax {
   text-align: center;
@@ -1511,21 +1511,20 @@ Section 5: Main
   margin: 100px 50px 50px; /* Top right/left bottom */
 }
 
-@media screen and (min-width: 1026px){
-  .package {
-    margin: 0px 20px;
-    width: 300px;
-    height: 500px;
-    background: var(--lightfont-bg);
+
+
+.package {
+  margin: 0px 20px;
+  width: 300px;
+  height: 500px;
+  background: var(--lightfont-bg);
 }
 
 .packages-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
 }
-}
-
 /************************************
 Section 5: Main
   Section 5.2: About Page
@@ -1782,31 +1781,6 @@ Section 7: Misc Code for testing
 /************************************
 Section 7: Testing Step container
 ************************************/
-
-.testimonial-quote blockquote {
-  color: var(--darkfont-bg);
-  font-size: 1.5em;
-  margin: 0 auto;
-  position: relative;
-  z-index: 600;
-}
-
-.testimonial-quote blockquote h2:first-child:before {
-  content: '\201C';
-  font-family: Georgia, serif;
-  color: var(--bluefont-bg);
-  font-size: 7em;
-  font-weight: 700;
-  position: absolute;
-  top: -.4em;
-  left: -.3em;    
-  z-index: -300;
-}
-
-.testimonial-quote {
-  position: relative; 
-}
-
 .process-content{
   display: flex;
   flex-direction: column;
@@ -1852,80 +1826,7 @@ Section 7: Testing Step container
   height: fit-content; 
   width: 300px;
 }
-.circle-container {
-  display: flex;
-  flex-direction: row;
-  border: 1px red solid;
-  width: 70%;
-  height:100%;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
 
-.pcircle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--bluefont-bg);
-  width: 75px;
-  height: 75px;
-  border: 3px solid var(--bluefont-bg);
-  background: var(--lightfont-bg);
-  border-radius: 50%;
-  position: relative;
-  z-index: 2;
-}
-.pcircle-line {
-  width: 100%;
-  z-index: 1;
-  border: 1px dashed var(--bluefont-bg);
-  position: absolute;
-}
-
-
-.pcircle:hover, .pfill {
-  background-color: var(--bluefont-bg);
-  color: var(--lightfont-bg);
-  border: 3px solid var(--bluefont-bg);
-  transform: scale(1.10);
-  box-shadow: 0 0 30px -10px var(--bluefont-bg);
-}
-
-
-/*
-#circle1 {
-  top: -20px;
-  right: 1018px;
-}
-#circle2 {
-  top: 150px;
-  right: 820px;
-}
-#circle3 {
-  top: -30px;
-  right: 570px;
-}
-#circle4 {
-  top: 130px;
-  right: 290px;
-}
-#circle5 {
-  top: 0px;
-  right: 50px;
-}
-*/
-.slopes svg {
-  height: 200px;
-  width: 1180px;
-}
-#slope{
-  position: absolute;
-}
-#dotted-slope{
-  position: absolute;
-  z-index: -1;
-}
 .process-container {
   flex-direction: column;
   justify-content: center;
@@ -1948,156 +1849,11 @@ Section 7: Testing Step container
 }
 
 
-/*
-#circle1::after {
-  content: '01';
-  position: absolute;
-  top: -40px;
-  color: var(--bluefont-bg);
-}
-
-#circle1:before {
-  content: 'Consultation';
-  position:Absolute;
-  font-size: .9rem;
-  top: 80px;
-  color: var(--darkfont-bg);
-}
-#circle2:after {
-  content: '02';
-  position: absolute;
-  top: -40px;
-  color: var(--bluefont-bg);
-}
-
-#circle2:before {
-  content: 'Design';
-  position:Absolute;
-  font-size: .9rem;
-  top: 80px;
-  color: var(--darkfont-bg);
-}
-#circle3:after {
-  content: '03';
-  position: absolute;
-  top: -40px;
-  color: var(--bluefont-bg);
-}
-
-#circle3:before {
-  content: 'Framework';
-  position:Absolute;
-  font-size: .9rem;
-  top: 80px;
-  color: var(--darkfont-bg);
-}
-#circle4:after {
-  content: '04';
-  position: absolute;
-  top: -40px;
-  color: var(--bluefont-bg);
-}
-
-#circle4:before {
-  content: 'Testing';
-  position:Absolute;
-  font-size: 1rem;
-  top: 80px;
-  color: var(--darkfont-bg);
-}
-#circle5:after {
-  content: '05';
-  position: absolute;
-  top: -40px;
-  color: var(--bluefont-bg);
-}
-
-#circle5:before {
-  content: 'Launch';
-  position:Absolute;
-  font-size: .9rem;
-  top: 80px;
-  color: var(--darkfont-bg);
-}
-*/
-.circle-img{
-  height:40px;
-  width: 40px;
-  object-fit: contain;
-}
-
-
-
-
-
-#float {
-  opacity: 0;
-  transform: translateY(100px);
-  transition: all 1s linear;
-}
-
-.box-hidden{
-  opacity: 0;
-  transition: 1s;
-  margin-bottom: 20px;}
-
-.box {
-  opacity: 1;}
-  
-  
-
-
-/*
-  .packages-container:after {
-    content: '';
-    width: 600px;
-    height: 600px;
-    border-radius: 50%;
-    position: absolute;
-    left: 0px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    background: linear-gradient(-110deg, var(--bluefont-bg), transparent);
-    opacity: 20%;
-    z-index: -1;
-}
-.packages-container:before {
-  content: '';
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  position: absolute;
-  right: 0px;
-  bottom: 30%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  background: linear-gradient(-110deg, var(--bluefont-bg), transparent);
-  opacity: 20%;
-  z-index: -1;
-}
-*/
 
 #services {
   position: relative;
   background-color: var(--litegreyfont-bg);
 }
-/*
-#services:before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  opacity: 10%;
-  z-index: -1;
-  background: rgb(255,255,255);
-  background: linear-gradient(0deg, rgba(255,255,255,1) 60%, rgba(80,198,219,1) 100%);
-}
-*/
 
 /************************************
 Section 8: Media Devices Content Styling
@@ -2177,6 +1933,9 @@ Section 8: Media Devices Content Styling
   #special{
     height:fit-content;
   }
+  #special-header{
+    height:fit-content;
+  }
   #packages {
    height: fit-content;
   }
@@ -2241,9 +2000,18 @@ Section 8: Media Devices Content Styling
     width: 300px;
   }
   .large-text{
-    font-size: 4rem;
-    letter-spacing: 3;
+    font-size: 3rem;
+    letter-spacing: 2;
   }
+}
+
+@media screen and (max-width: 640px)
+{
+    body, html{
+        width: 100vw;
+        overflow-x: hidden;
+        padding: 0.8em 0;
+    }
 }
 
 /* Phone Styling */
@@ -2287,11 +2055,27 @@ Section 8: Media Devices Content Styling
     padding-bottom: 20px;
   }
   .large-text{
-    font-size: 2.5rem;
-    letter-spacing: 3;
+    font-size: 2rem;
+    letter-spacing: 2;
   }
   .half-img {
     height: 350px;
+    width: 250px;
+  }
+  #about-back-img {
+    bottom: 100px;
+    left: -25px;
+  }
+  .author-header-bg{
+    height: 375px;
+    width: 275px;
+  }
+  .author-header-bg2{
+    height: 390px;
+    width: 275px;
+  }
+  .author-header-bg3{
+    height: 325px;
     width: 250px;
   }
   
