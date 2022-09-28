@@ -86,65 +86,38 @@
     <i class="fa-solid fa-angle-up"></i>
   </button>
 
+   <!--
   <section class="parallax parallax-sm-md parallax-img-third">
     <div class="hero-content-small">
       <h1>Contact Us</h1>
     </div>
+  </section>-->
+
+  <section class=" parallax-sm-md parallax-img-third">
+    <div class="hero-content-small">
+      <h1>Services</h1>
+    </div>
   </section>
 
 
-  <section class="sub-section-sm top" id="contact-header">
-    <div class="sub-section-content">
-      <h1>Ready to Launch Your Website Online?</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
-      </p>
-      <div class="form-header">
-        <h3>Let's Make Something Awesome Together!</h3>  
-      </div>
-    </div>
-    </section> 
 
   <section class="left right" id="form-section">
     <div class="half-container">
 
-      <!--
-      <div class="half">
-        <div class="contact-img-container">
-          <img src="Images/chat.png" class="contact-img">
-        </div>     
-      </div> --> 
-
-      <div class="half">
-
-          <h2>Contact Info</h2>
-
-            <div class="contact">
-               <div class="contact-info">
-                 <h4 class="blue-text">Location</h4>
-                 <p>123 Main Street<br>
-                   Unit 123 <br>
-                   Anywhere, USA 12345</p>
-               </div>
-             </div>
-         
-             <div class="contact">
-               <div class="contact-info">
-                 <h4 class="blue-text">Phone</h4>
-                 <a class="contact-hyper" href="mailto:someone@yoursite.com">888-888-8888</a>
-               </div>
-             </div>
-       
-             <div class="contact">
-               <div class="contact-info">
-                 <h4 class="blue-text">Email</h4>
-                 <a class="contact-hyper" href="mailto:someone@yoursite.com">someone@yoursite.com</a>
-               </div>
-             </div>
-       
+      <div class="half-top">
+        <div class="sub-section-content-left">
+          <h1>Ready to Launch Your Website?</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
+          </p>
+          <div class="form-header highlight-inline">
+            <h3>Let's Make Something Awesome!</h3>  
           </div>
+        </div>
+      </div>
 
-      <div class="half">
+
+      <div class="half-bottom center">
         <div id="form">
           <div class="form-info">
             <form action="action_page.php">
@@ -156,12 +129,12 @@
     
               <label for="femail">Email</label>
               <input type="text" id="femail" name="email" placeholder="Email...">
-    
+              <!--
               <label for="fphone">Phone Number</label>
-              <input type="text" id="fphone" name="phonenumber" placeholder="Phone Number...">
+              <input type="text" id="fphone" name="phonenumber" placeholder="Phone Number...">-->
           
               <label for="subject">Subject</label>
-              <textarea id="subject" name="subject" placeholder="Let Us Know What You Need Help With!..." style="max-height: 165px;"></textarea>
+              <textarea id="subject" name="subject" placeholder="Let Us Know What You Need Help With!..." style="height: 180px;" ></textarea>
           
               <input type="submit" value="Submit">
           
@@ -174,15 +147,18 @@
     </div>
   </section>
 
+
+
   <section class="sub-section-xsm" id="plane-section">
     <div class="section-transition">
       <img src="Images/paper-plane-icon.png" class="plane-img" id="plane1">
       <img src="Images/paper-plane-icon.png" class="plane-img" id="plane2">
     </div>
   </section>
+ 
 
 
-  <section class="sub-section-sm">
+  <section class="sub-section-md">
         <div class="Map">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11881.326720975272!2d-87.64824635199615!3d41.8857234350866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2d5e914ffb75%3A0x25206a0dcfd2dc09!2sThe%20UPS%20Store!5e0!3m2!1sen!2sus!4v1657677469712!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" alt="Business Location"></iframe>
         </div>
@@ -199,7 +175,10 @@
         <div class="footer-summary">
           <div class="about-summary">
             <h6>About</h6>
-            <p>Etiam quis tortor vestibulum, iaculis arcu imperdiet, consectetur enim. Aenean blandit iaculis metus vehicula interdum. Nulla at vulputate magna. Sed posuere molestie tincidunt. Phasellus ante nisl, finibus et lorem nec, fringilla sagittis elit.</p>
+            <p>A Chicago based web design and development company focused on partnering with small businesses
+              to provide website solutions. Our goal is to provide all clients with unique websites
+              and outstanding services that meet their business needs.
+            </p>
           </div>
           <div class="social">
             <ul class="social-icons">
@@ -215,15 +194,15 @@
         <div class="site-map">
           <div class="footer-links">
             <h6>Navigation</h6>
-            <a href="#About">About Us</a>
-            <a href="#About">Portfolio</a>
-            <a href="#About">Services</a>
-            <a href="#About">Contact</a>
+            <a href="#./about.html">About</a>
+            <a href="./portfolio.html">Portfolio</a>
+            <a href="./servces.html">Services</a>
+            <a href="./contact.html">Contact</a>
           </div>
   
           <div class="footer-links">
             <h6>Contact</h6>
-            <p>WebDesign <br>
+            <p><span class="blue-text">Web</span>Design <br>
               123 Main Street<br>
               Anywhere, USA
             </p>
@@ -239,11 +218,12 @@
   
   <div class="footer-bottom">
           <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
-          <a href="#">Web Design</a>.
+          <a href="#"><span class="blue-text">Web</span>Design</a>.
           </p>
   </footer>
   
-  <script src="/Users/eclampitt/Desktop/Documents/Code_Academy/Emily/BlueHound/Test/js/testjava.js"></script>
+  <script src="/Users/eclampitt/OneDrive - DMI/Desktop/Documents/Code_Academy/Emily/BlueHound/Test/js/testjava.js"></script>
+  <script src="/Test/js/testjava.js"></script>
   
   </body>
   </html>
