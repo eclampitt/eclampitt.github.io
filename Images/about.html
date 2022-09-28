@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<!--Project Head-->
+<head>
+    <!-- Specify the character encoding for the HTML document-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Place the meta description text here.">
+    <meta name=”robots” content="index, follow">
+
+    <link rel="stylesheet" href="style.css">
+    <!--Link Social Icons-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>Emily Clampitt</title>
+    <!--Import Web Fonts-->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');    
+      @import url('https://fonts.googleapis.com/css?family=Bungee|Bungee+Hairline|Bungee+Inline|Bungee+Outline|Bungee+Shade');
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+    </style>
+    <!--Import FA Icons-->
+    <script src="https://kit.fontawesome.com/baab76043c.js" crossorigin="anonymous"></script>
+    <!--Import JQuery-->
+ 
+  </head>
+
+
+<body>
+
+<header>
+
+    <nav class="Top-Nav">
+      <div class="Top-Content">
+      <a href="./index.html" class="logo">Logo</a>
+        <div class="Top-Menu">
+          <a href="./about.html">About</a>
+          <a href="./portfolio.html">Portfolio</a>
+          <div class="dropdown">
+            <button class="dropbtn"  onclick="droptoggle()">Services
+              <i class="fa-solid fa-angle-down carat"></i>
+            </button>
+                <div class="dropdown-content droptop">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
+          </div>
+          <a href="./contact.html">Contact</a>
+      </div>
+      
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+
+        <div class="Side-Nav">
+          <div class="Side-Menu">
+            <a href="./about.html">About</a>
+            <a href="./portfolio.html">Portfolio</a>
+            <div class="dropdown">
+              <button class="dropbtn"  onclick="droptoggle();">Services
+                <i class="fa-solid fa-angle-down carat"></i>
+              </button>
+                  <div class="dropdown-content side droptop">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                  </div>
+            </div>
+            <a href="./portfoli.html">Portfolio</a>
+            <a href="./contact.html">Contact</a>
+            <a href="./testimonial.html">Testimonial</a>
+          </div>
+        </div>
+    </nav>
+  </header>
+
+<main>
+
+  <button onclick="topFunction()" id="totop" title="Go to top">
+    <i class="fa-solid fa-angle-up"></i>
+  </button>
+
+  <section class="parallax parallax-img-first top-bottom" id="main1">
+        
+    <div class="hero-content">
+      <h1 class="giant-header">about</h1>
+
+</section>
+
+
+    <section class="left top-bottom right" id="about">
+
+      <div class="half-container">
+        
+        <div class="half author-header">
+          <p><span style="color: var(--bluefont-bg)">Web</span>Design</p>
+          <h2>Chicago-Based Web Design + Developer</h2>
+          <p>
+            Hello! My name is Emily, and I am the founder of <span style="color: var(--bluefont-bg)">Web</span>Design. The founding 
+            of <span style="color: var(--bluefont-bg)">Web</span>Design began in early 2021. I started taking online programming courses
+            as a self-lead continuing education initiative with the end goal of increasing my technical knowledge. With a background in engineering 
+            it was easy for me to pickup HTML, CSS, and Javascript. As I learned more about web design and development, I began to see all the different business
+            opportunities available to me if I continued on with the path I was on. From there I slowly started to hand-build websites and began to see the
+            very real possibiliy of having a web design and development business. <br><br>
+
+            It has always been a dream of mine to own a business, something that I built from the ground up. <span style="color: var(--bluefont-bg)">Web</span>Design
+            is that business and it is something that I take great pride in running. By partnering with <span style="color: var(--bluefont-bg)">Web</span>Design, know that
+            I will take the time and do the work to provide you a website that you are proud to show your clients.
+          </p>
+          <div class="divider"></div>
+        </div>
+        
+        <div class="half" >
+          <div class="half-img-container">
+            <img src="Images/img1.jpg" class="half-img">
+            <div class="author-header-bg"></div>
+            <div class="author-header-bg2"></div>
+            <div class="author-header-bg3"></div>
+          </div>
+        </div>
+      
+      </div>
+    </section>
+
+
+    <section class="sub-section-sm top-bottom client-focused" id="special-header">
+      <div class="sub-section-content">
+        <h4>Client Focused</h4>
+        <h1>What Makes us so Special</h1>
+        <h3>When working with <span style="color: var(--bluefont-bg)">Web</span>Design our focus is on your business and needs</h3>
+      </div>
+    </div>
+    </section>
+
+    <section class="sub-section-md client-focused" id="special">
+      <div class="sixth-container-horizontal">
+          
+        <div class="sixth-horizontal border-slide">
+          <div class="customer-info">
+            <h3 class="gradient-text">Hosting</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            </p>
+          </div>
+        </div>
+    
+        <div class="sixth-horizontal border-slide">
+          <div class="customer-info">
+            <h3 class="gradient-text">Hosting</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            </p>
+          </div>
+        </div>
+    
+        <div class="sixth-horizontal border-slide">
+          <div class="customer-info">
+            <h3 class="gradient-text">Hosting</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            </p>
+          </div>
+        </div>
+
+    </div>
+    </section>
+
+    
+    <section class="sub-section-md top" id="about-cta">
+      <div class="left half-container">
+        <div class="half">
+            <h4 class="blue-text">Let's Talk</h4>
+            <h1 class="large-text">About Your <br><span class="bold-text highlight-inline">
+              Next Project.</span></h1>
+        </div>
+    
+        <div class="half center">
+          <button class="pill-button">About Us</button>
+        </div>
+
+      </div>
+
+    </section>
+
+
+<!--Project Footer-->
+<footer>
+
+  <div class="footer-top">
+        <div class="footer-summary">
+          <div class="about-summary">
+            <h6>About</h6>
+            <p>A Chicago based web design and development company focused on partnering with small businesses
+              to provide website solutions. Our goal is to provide all clients with unique websites
+              and outstanding services that meet their business needs.
+            </p>
+          </div>
+          <div class="social">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+  
+  
+        <div class="site-map">
+          <div class="footer-links">
+            <h6>Navigation</h6>
+            <a href="#./about.html">About</a>
+            <a href="./portfolio.html">Portfolio</a>
+            <a href="./servces.html">Services</a>
+            <a href="./contact.html">Contact</a>
+          </div>
+  
+          <div class="footer-links">
+            <h6>Contact</h6>
+            <p><span class="blue-text">Web</span>Design <br>
+              123 Main Street<br>
+              Anywhere, USA
+            </p>
+            <p>888-888-8888</p>
+          </div>
+  
+        </div>
+  
+    
+  </div>
+  
+  <hr class="center-line">
+  
+  <div class="footer-bottom">
+          <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
+          <a href="#"><span class="blue-text">Web</span>Design</a>.
+          </p>
+  </footer>
+  
+  <script src="/Users/eclampitt/OneDrive - DMI/Desktop/Documents/Code_Academy/Emily/BlueHound/Test/js/testjava.js"></script>
+  <script src="/Test/js/testjava.js"></script>
+  
+  </body>
+  </html>
