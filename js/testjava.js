@@ -27,11 +27,18 @@ function MblMenuBtn() {
     menuBtn.classList.add("close");
     sidemenu.style.display = "flex";
     body.style.overflow = "hidden"; // Removes scroll from side menu
+
+    btnlinearray.forEach((array) => {
+      array.style.backgroundColor = 'var(--darkfont-bg)';
+    });  
     } 
   else {
     menuBtn.classList.remove("close");
     sidemenu.style.display = "none"
     body.style.overflow = "auto";
+    btnlinearray.forEach((array) => {
+      array.style.backgroundColor = 'var(--lightfont-bg)';
+    });  
     }
   }
 
@@ -123,14 +130,24 @@ function scrollFunction() {
     nav.style.color = 'var(--darkfont-bg)';
     nav.style.transition  = "all .25s";
     nav.style.boxShadow = '0px 2px 3px 1px rgba(0,0,0,0.2)';   
+    btnlinearray.forEach((array) => {
+      array.style.backgroundColor = 'var(--darkfont-bg)';
+    });  
+    
   } else {
     totop.style.display = "none";
     nav.style.transition  = "all .25s";
     nav.style.boxShadow = 'none';
     nav.style.backgroundColor = 'transparent';
     nav.style.color = 'var(--lightfont-bg)';
+    btnlinearray.forEach((array) => {
+      array.style.backgroundColor = 'var(--lightfont-bg)';
+    });  
+    
   }
 }
+
+
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
@@ -187,32 +204,32 @@ function arrows() {
     arrowl.style.display= "initial";
     arrowr.style.display= "initial";
     processheader[0].innerHTML = "Consultation";
-    processdescription[0].innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+    processdescription[0].innerHTML = "During the consultation, we work on introducing a problem-solving mindset with our clients and ask questions like \"What goals do you want your website to achieve?\". This time is used to better understand your needs and wants for a website. ";
   }
   else if (count ===2) {
     arrowl.style.display= "initial";
     arrowr.style.display= "initial";
-    processheader[0].innerHTML = "Design";
-    processdescription[0].innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+    processheader[0].innerHTML = "Framework";
+    processdescription[0].innerHTML = "Once we have a better understanding of your goals, we can then transition to design of the site. The design process will include discussing overall branding as well as look and feel of your website.";
   }
   else if (count === 3) {
     arrowl.style.display= "initial";
     arrowr.style.display= "initial";
-    processheader[0].innerHTML = "Framework";
-    processdescription[0].innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+    processheader[0].innerHTML = "Design";
+    processdescription[0].innerHTML = "When the framework is approved we begin building the site from the ground up. This part of process is where all the heavy lifting happens.";
     }
   else if (count === 4) {
     arrowl.style.display= "initial";
     arrowr.style.display= "initial";
     processheader[0].innerHTML = "Testing";
-    processdescription[0].innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+    processdescription[0].innerHTML = "After designing the site with all the discussed requirments we launch a demo for our clients to test. During this time our clients take their sites for a test drive and provide us with feedback on changes they would like to make before the launch.";
     arrowlicon.classList.remove('l-slide');
     }
   else if (count === 5) {
     arrowl.style.display= "initial";
     arrowr.style.display= "none";
     processheader[0].innerHTML = "Launch";
-    processdescription[0].innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+    processdescription[0].innerHTML = "The last step in our process is the launch! After running through the test site and completing any revisions, it's time to launch your new site for everyone to enjoy!";
     arrowlicon.classList.add('l-slide');
     }
 
