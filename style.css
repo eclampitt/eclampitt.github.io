@@ -104,6 +104,9 @@ use for finding oversized eleemnts
 /*
 body * { outline: 1px solid red; }
 */
+body {
+  overflow-x: hidden;
+}
 
 /************************************
 Section 4: Header
@@ -946,6 +949,10 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   bottom: 50px;
   right: 100px;
   z-index: -1;
+}
+#about{
+  background-color: var(--litegreyfont-bg);
+
 }
 #aboutblock {
   bottom: 0px;
@@ -1876,7 +1883,6 @@ Section 7: Testing Step container
 
 #services {
   position: relative;
-  background-color: var(--litegreyfont-bg);
 }
 
 /************************************
