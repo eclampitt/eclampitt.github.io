@@ -98,6 +98,12 @@ p *{
   padding: 20px 0px;
 }
 
+/************************************
+use for finding oversized eleemnts
+************************************/
+/*
+body * { outline: 1px solid red; }
+*/
 
 /************************************
 Section 4: Header
@@ -112,7 +118,6 @@ nav {
   justify-content: space-between;
   width: 100%;
   z-index: 1000;
-  overflow-x: hidden;
   top: 0px;
 }
 
@@ -128,8 +133,8 @@ nav {
 }
 
 .Top-Content {
-    display: flex;
     width: 100%;
+    display: flex;
     justify-content: space-between;
 }
 
@@ -375,12 +380,14 @@ section {
   cursor: pointer;
 }
 .contact-img-container{
-  width: 100%;
-  height: 100%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 5px;
+  border-radius: 50%;
+  background-color: var(--bluefont-bg);
 }
 .divider {
   display: inline-block;
@@ -471,6 +478,7 @@ section {
 }
 .form-header{ 
   width: 300px;
+  min-width: 200p
 }
 
 .form-container {
@@ -644,6 +652,10 @@ Section 5: Main
   white-space: nowrap;
   margin: 10px 0px;
 }
+.pill-button a{
+  text-decoration: none;
+  color: inherit;
+}
 .pill-button:hover {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease-out;
@@ -798,19 +810,29 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   z-index: -1;
   object-fit: contain;
 }
+.contact-info {
+  text-align: center;
+}
 .contact-info a {
   text-decoration: none;
   color: inherit;
 }
+.contact-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: top;
+}
 .contact {
   margin-top: 20px;
-  border: 1px dotted var(--bluefont-bg);
   border-radius: 5px;
   height: fit-content;
   width: 400px;
   padding: 10px;
   display: flex;
-  justify-content: left;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 .about-block {
@@ -913,6 +935,7 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
 }
 #form-section {
   height: 125vh;
+  background-color: var(--litegreyfont-bg);
 }
 .form-info {
   padding: 20px;
@@ -1018,7 +1041,7 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   column-gap: 20px;
   height: 100%;
   width: 100%;
-  min-width:450px;
+  min-width:350px;
 }
 .customer-content {
   display: grid;
@@ -2009,7 +2032,7 @@ Section 8: Media Devices Content Styling
 /* Phone Styling */
 @media only screen and (max-width: 595px) {
   
-  .Top-Menu {
+  .Top-Menu,.Top-Menu a, .Top-Menu .dropdown{
     display:none;
   }
   .Side-Nav {
@@ -2085,9 +2108,8 @@ Section 8: Media Devices Content Styling
   .Side-Menu {
     overflow-y: scroll;
   }
+
 }
-
-
 
 
 #arrow-right .r-slide {
