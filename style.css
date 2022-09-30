@@ -827,6 +827,7 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   justify-content: center;
   align-items: top;
 }
+
 .contact {
   margin-top: 20px;
   border-radius: 5px;
@@ -1890,6 +1891,9 @@ Section 8: Media Devices Content Styling
 ************************************/
 /* Phone Styling */
 @media only screen and (max-width: 1500px) {
+  #contact-section {
+    height: 150vh;
+  }
   .services-content {
     grid-template-columns: repeat(2, 1fr); 
     grid-template-rows: repeat(3, 1fr); 
