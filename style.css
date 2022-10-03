@@ -808,7 +808,9 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   width: 400px;
   object-fit: cover;
   border-radius: 10px;
-  z-index: 10;
+}
+.half-img img{
+  z-index: 4;
 }
 .contact-img {
   height: 575px;
