@@ -1943,7 +1943,7 @@ Section 8: Media Devices Content Styling
     grid-template-columns: repeat(2, 1fr); 
     grid-template-rows: repeat(3, 1fr); 
   }
-  .service-info-txt, .learn-more-container {
+  .service-info-txt, .learn-more-container, .service-icon {
     text-align: center;
   }
   #services {
