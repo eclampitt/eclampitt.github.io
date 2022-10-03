@@ -831,7 +831,7 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: top;
+  align-items: center;
 }
 
 .contact {
