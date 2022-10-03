@@ -326,6 +326,9 @@ section {
 .benefit-header {
   margin-top: 30px;
 }
+#main-cta {
+  min-height: 500px;
+}
 .sub-section-content h3, .benefit-header h3{
   font-size: 1.15rem;
   line-height: 1.75;
