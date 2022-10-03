@@ -590,7 +590,7 @@ section {
 }
 .hero-content {
   position: absolute;
-  width: 60%;
+  width: 100%;
   left: 0px;
   top: 200px;
   padding: 40px 50px;
@@ -606,14 +606,7 @@ section {
   text-align: center;
   color: var(--lightfont-bg);
 }
-#main-img{
-  height: 300px;
-  width: 700px;
-  top: 250px;
-  right: -50px;
-  position: absolute;
-  z-index: -1;
-}
+
 .dual-button-container {
   display: flex;
   flex-direction: row;
