@@ -286,6 +286,9 @@ section {
   height: 100vh;
   width: 100%;
 }
+.sub-section-content-left {
+  padding-right: 10px;
+}
 .sub-section {
   height: 35vh;
   min-height: 400px;
@@ -301,12 +304,18 @@ section {
   height: 50vh;
   min-height: 40vh;
 }
+.sub-section-md-sm {
+  height: 40vh;
+}
 .sub-section-sm {
   height: 30vh;
   min-height: 20vh;
 }
 .sub-section-xsm {
   height: 20vh;
+}
+.sub-section-xxsm {
+  height: 10vh;
 }
 .sub-section-content {
   margin: 0 auto;
@@ -315,7 +324,13 @@ section {
   width: 100%;
   padding: 0 10px;
 }
-
+#sub-section-content-main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .sub-section-txt h3{
   min-width: 300px;
 }
@@ -529,10 +544,6 @@ section {
   padding-top: 80px;
   padding-bottom: 80px;
 }
-.highlight{
-  background: linear-gradient(to right, var(--bluefont-bg), var(--splitcompblue), var(--splitcomppink));
-  color: var(--lightfont-bg);
-}
 .highlight-inline{
   background: linear-gradient(to right, var(--bluefont-bg), var(--splitcompblue), var(--splitcomppink));
   color: var(--lightfont-bg);
@@ -547,7 +558,9 @@ section {
   padding:5px;
   border-radius: 5px;
 }
-
+.highlight-text{
+  color: linear-gradient(to right, var(--bluefont-bg), var(--splitcompblue), var(--splitcomppink));
+}
 .bold-text{
   font-weight: bold;
   text-transform: uppercase;
@@ -716,7 +729,6 @@ Section 5: Main
 }
 #project-cta {
   position: relative;
-  padding-top: 80px;
   align-items: top;
   width: 100%;
   height: 100%;
@@ -808,8 +820,7 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   width: 400px;
   object-fit: cover;
   border-radius: 10px;
-}
-.half-img img{
+  position: relative;
   z-index: 4;
 }
 .contact-img {
@@ -831,7 +842,7 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: top;
 }
 
 .contact {
@@ -876,7 +887,6 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   background-color: var(--bluefont-bg);
   position:absolute;
   border-radius: 10px;
-  z-index:3;
   transform: rotate(2deg);
   top: 0;
   left: 0;
@@ -888,7 +898,6 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   background-color: var(--bluelitefont-bg);
   position:absolute;
   border-radius: 10px;
-  z-index:2;
   transform: rotate(-2deg);
   top: 0;
   left: 0;
@@ -960,10 +969,10 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
 #about-front-img {
   z-index: 2;
 }
-#about{
-  background-color: var(--litegreyfont-bg);
-
+#about-small-section{
+  background-color: var(--bluelitefont-bg);
 }
+
 #aboutblock {
   bottom: 0px;
   right: 30px;
@@ -1029,13 +1038,13 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   color: var(--darkfont-bg2)
 }
 .parallax-img-first {
-  background-image: url(Images/bluehour.jpg);
+  background-image: url(Images/blue-background-lite.jpg);
 }
 .parallax-img-second {
   background-image: url(Images/framework.jpg);
 }
 .parallax-img-third {
-  background-image: url(Images/blue-background.jpg);
+  background-image: url(Images/blue-background-lite.jpg);
 }
 
 
@@ -1057,6 +1066,7 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
     polygon clippath 
     https://bennettfeely.com/clippy/
 ************************************/
+
 .services-content {
   display: grid;
   flex-wrap: wrap;
@@ -1228,12 +1238,13 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
 .service {
   margin: 0 auto;
   grid-column: span 1;
-  height: 300px;
+  height: 350px;
   width: 275px;
-  box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.2); /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
   border-radius: 5px;
   background-color: var(--lightfont-bg);
-  border-bottom: 5px solid var(--bluefont-bg);
+  border-bottom: 4px solid var(--bluefont-bg);
 }
 .service-info {
   padding: 20px;
@@ -1241,6 +1252,7 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   color: var(--greyfont-bg);
   line-height: 1.5;
 }
+
 .service-info-txt{
   height: 230px;
 }
@@ -1253,6 +1265,10 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   height: 100%;
   color: var(--greyfont-bg);
   line-height: 1.5;
+  margin-left: 5px;
+}
+#service1 .customer-info{
+  justify-content: center;
 }
 .service-info a {
   text-decoration: none;
@@ -1262,6 +1278,9 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   height: 150px;
   width: 100%;
   object-fit: fill;
+}
+.service-icon {
+  margin-bottom: 20px;
 }
 .customer-img {
   height: 100px;
@@ -1469,9 +1488,10 @@ Section 5: Main
     Section 5.1.4: Pricing Section
 ************************************/
 #packages {
-  padding: 100px 0px 100px; /* top | right | bottom | left */
+  padding: 100px 0px 50px; /* top | right | bottom | left */
   position: relative;
-  height: 150vh;
+  height: 100vh;
+  min-height: 1248px;
 }
 .process-img {
   z-index:-1;
@@ -1728,7 +1748,13 @@ footer h6 {
   width:80%;
   margin: 0 auto;
 }
-
+#about-button-center {
+  display: flex;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
 
 .footer-links {
   margin-right:100px;;
@@ -1897,7 +1923,9 @@ Section 7: Testing Step container
   align-items: center;
 }
 
-
+#special {
+  min-height: 350px;
+}
 
 #services {
   position: relative;
@@ -1909,7 +1937,7 @@ Section 8: Media Devices Content Styling
 /* Phone Styling */
 @media only screen and (max-width: 1500px) {
   #contact-section {
-    height: 150vh;
+    height: 60vh;
   }
   .services-content {
     grid-template-columns: repeat(2, 1fr); 
@@ -1952,9 +1980,7 @@ Section 8: Media Devices Content Styling
     height: fit-content;
   }
 
-  #form-section{
-    height: 150vh;
-  }
+
   #about{
   padding-top: 70px;
   padding-bottom: 70px;
@@ -1970,6 +1996,9 @@ Section 8: Media Devices Content Styling
 }
 
 @media only screen and (max-width: 1150px) {
+  #contact-section {
+    height: 75vh;
+  }
   .services-content {
     grid-template-columns: repeat(1, 1fr); 
     grid-template-rows: repeat(6, 1fr); 
@@ -2051,6 +2080,9 @@ Section 8: Media Devices Content Styling
   .large-text{
     font-size: 3rem;
     letter-spacing: 2;
+  }
+  #form {
+    padding: 0px 10px;
   }
 }
 

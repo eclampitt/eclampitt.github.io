@@ -216,7 +216,7 @@ function arrows() {
     arrowl.style.display= "initial";
     arrowr.style.display= "initial";
     processheader[0].innerHTML = "Design";
-    processdescription[0].innerHTML = "When the framework is approved we begin building the site from the ground up. This part of process is where all the heavy lifting happens.";
+    processdescription[0].innerHTML = "When the framework is approved we begin building the site from the ground up. This part of process is where all the heavy lifting happens. The design process will take the longest to complete.";
     }
   else if (count === 4) {
     arrowl.style.display= "initial";
