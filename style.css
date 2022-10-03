@@ -719,7 +719,7 @@ Section 5: Main
   height: 100%;
 }
 .scroll-container {
-  margin-top: 100px;
+  padding-top: 25px;
   margin: 0 auto;
   display: block;
   height: 75px;
@@ -994,7 +994,16 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   background-attachment: fixed; /*  Parallax event  */
 }
 .parallax-sm {
+  text-align: center;
+  width: 100%;
   height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /*  Parallax event  */
 }
 .blank {
   width: 100%;
@@ -1014,11 +1023,10 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   background-image: url(Images/bluehour.jpg);
 }
 .parallax-img-second {
-  z-index: -3;
   background-image: url(Images/framework.jpg);
 }
 .parallax-img-third {
-  background-image: url(Images/sub-pg-header.jpg);
+  background-image: url(Images/blue-background.jpg);
 }
 
 
@@ -1420,7 +1428,7 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_opac
   opacity: 0;
   position: absolute;
   top: 50%;
-  left: 28%;
+  left: 25%;
   margin: 0 auto;
   transform: translate(-28%, -50%);
   text-align: center;
@@ -1452,7 +1460,6 @@ Section 5: Main
     Section 5.1.4: Pricing Section
 ************************************/
 #packages {
-  height: 120vh;
   padding: 100px 0px 100px; /* top | right | bottom | left */
   position: relative;
 }
@@ -1934,9 +1941,7 @@ Section 8: Media Devices Content Styling
   #benefits {
     height: fit-content;
   }
-  section {
-    height: 150vh;
-  }
+
   #form-section{
     height: 150vh;
   }
@@ -1974,7 +1979,7 @@ Section 8: Media Devices Content Styling
    height: fit-content;
   }
   .package {
-   margin-top: 20px;
+   margin-top: 40px;
   }
 }
 
