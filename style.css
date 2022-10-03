@@ -393,7 +393,7 @@ section {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: var(--bluefont-bg);
+  background-color: var(--darkfont-bg);
 }
 .divider {
   display: inline-block;
@@ -808,6 +808,7 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   width: 400px;
   object-fit: cover;
   border-radius: 10px;
+  z-index: 4;
 }
 .contact-img {
   height: 575px;
@@ -873,7 +874,7 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   background-color: var(--bluefont-bg);
   position:absolute;
   border-radius: 10px;
-  z-index:-1;
+  z-index:3;
   transform: rotate(2deg);
   top: 0;
   left: 0;
@@ -885,7 +886,7 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   background-color: var(--bluelitefont-bg);
   position:absolute;
   border-radius: 10px;
-  z-index:-2;
+  z-index:2;
   transform: rotate(-2deg);
   top: 0;
   left: 0;
@@ -898,7 +899,7 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   border: 5px dotted var(--bluelitefont-bg);
   position:absolute;
   border-radius: 10px;
-  z-index:0;
+  z-index:5;
   transform: rotate(3deg);
   top: 0;
   left: 0;
