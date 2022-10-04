@@ -139,7 +139,7 @@ function scrollFunction() {
     nav.style.transition  = "all .25s";
     nav.style.boxShadow = 'none';
     nav.style.backgroundColor = 'transparent';
-    nav.style.color = 'var(--lightfont-bg)';
+    nav.style.color = 'var(--bluefont-bg)';
     btnlinearray.forEach((array) => {
       array.style.backgroundColor = 'var(--lightfont-bg)';
     });  
