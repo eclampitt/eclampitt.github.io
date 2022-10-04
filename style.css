@@ -925,7 +925,7 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   border-bottom: 10px dotted var(--bluelitefont-bg);
 }
 .half-img-container{
-  margin: 0 25%;
+  margin: 0 auto;
   position: relative;
 }
 .contact-block-bg{
@@ -2103,7 +2103,7 @@ Section 8: Media Devices Content Styling
 
 @media only screen and (max-width: 1150px) {
   #contact-section {
-    height: 100vh;
+    height: 120vh;
   }
   .services-content {
     grid-template-columns: repeat(1, 1fr); 
