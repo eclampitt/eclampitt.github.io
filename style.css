@@ -2171,6 +2171,9 @@ Section 8: Media Devices Content Styling
     height: 400px;
     width: 300px;
   }
+  .half-img-container{
+    margin-top: 40px;
+  }
   .author-header-bg{
     height: 425px;
     width: 325px;
