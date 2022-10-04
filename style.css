@@ -1998,6 +1998,40 @@ Section 7: Testing Step container
 #services {
   position: relative;
 }
+#contact-section {
+  min-height: 350px;
+}
+
+/************************************
+Section 8: Coming soon section
+************************************/
+
+
+@keyframes fadeIn {
+  from {top: 20%; opacity: 0;}
+  to {top: 100; opacity: 1;}
+  
+}
+
+@-webkit-keyframes fadeIn {
+  from {top: 20%; opacity: 0;}
+  to {top: 100; opacity: 1;}
+  
+}
+
+
+.dot {
+  color: var(--bluefont-bg);
+}
+
+#soon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height:100%;
+}
 
 /************************************
 Section 8: Media Devices Content Styling
@@ -2290,5 +2324,4 @@ Section 8: Media Devices Content Styling
 
   }
 }
-
 
