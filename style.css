@@ -116,7 +116,7 @@ nav {
   align-items: center;
   background-color: transparent;
   box-shadow: none;
-  color:var(--lightfont-bg);
+  color:var(--bluefont-bg);
   display: flex;
   height: 80px;
   justify-content: space-between;
@@ -2103,7 +2103,7 @@ Section 8: Media Devices Content Styling
 
 @media only screen and (max-width: 1150px) {
   #contact-section {
-    height: 75vh;
+    height: 100vh;
   }
   .services-content {
     grid-template-columns: repeat(1, 1fr); 
