@@ -68,6 +68,7 @@ Section 2: Variables
     --litegreyfont2-bg: #d6d6d9;
     --hyperlinkclr: #3366cc;
     --triadteal: #277F8F;
+    --triadteal-rgb: rgb(39,127,143);
     --triadpink:#DB679B;
     --splitcompblue:#5C85DB;
     --splitcomppink:#DB7A67;
@@ -108,20 +109,6 @@ body {
   overflow-x: hidden;
 }
 
-
-.parallax:after{
-  content:"";
-  position:fixed; /* stretch a fixed position to the whole screen */
-  top:0;
-  height:100vh; /* fix for mobile browser address bar appearing disappearing */
-  left:0;
-  right:0;
-  z-index:-1; /* needed to keep in the background */
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 /************************************
 Section 4: Header
 ************************************/
@@ -938,7 +925,7 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   border-bottom: 10px dotted var(--bluelitefont-bg);
 }
 .half-img-container{
-  margin: 0 auto;
+  margin: 0 25%;
   position: relative;
 }
 .contact-block-bg{
@@ -1008,12 +995,7 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   background-position: center;
   background-attachment: fixed; /*  Parallax event  */
 }
-.parallax-md-lg {
-  height: 60vh;
-}
-.parallax-md {
-  height: 50vh;
-}
+
 .parallax-sm-md {
   text-align: center;
   width: 100%;
@@ -1998,43 +1980,8 @@ Section 7: Testing Step container
 #services {
   position: relative;
 }
-/************************************
-Mobile Friendly Parallax Header
-************************************/
-#page-header {
-  height: 220px;
-  background: url(Images/blue-background-lite.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: left;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-}
-#page-header {
-  position: relative;
-  z-index: 90;
-}
 
-#page-header:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: #00306b;
-  background: -o-linear-gradient(left,#00306b 0,rgba(0,122,213,.727608543417367) 100%);
-  background: -webkit-gradient(linear,left top,right top,from(rgba(0,48,107,.7)),to(rgba(0,122,213,.927608543417367)));
-  background: linear-gradient(90deg,rgba(0,48,107,.9) 0,rgba(0,122,213,.427608543417367) 100%);
-}
+
 /************************************
 Section 8: Coming soon section
 ************************************/
@@ -2144,6 +2091,13 @@ Section 8: Media Devices Content Styling
   }
   .sixth-horizontal {
     width: 350px;
+  }
+}
+
+/*Turn off parallax for mobile devices*/
+@media only screen and (max-device-width: 1366px) {
+  .parallax, .parallax-sm, .parallax-sm-md {
+    background-attachment: scroll;
   }
 }
 
