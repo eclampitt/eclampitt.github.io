@@ -262,7 +262,7 @@ Section 4: Header
 .btn-line {
     width: 28px;
     height: 3px;
-    background-color: var(--lightfont-bg);
+    background-color: var(--darkfont-bg);
     transition: all 0.25s ease-out;
     border-radius: 5px;
 }
