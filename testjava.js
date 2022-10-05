@@ -37,7 +37,7 @@ function MblMenuBtn() {
     sidemenu.style.display = "none"
     body.style.overflow = "auto";
     btnlinearray.forEach((array) => {
-      array.style.backgroundColor = 'var(--lightfont-bg)';
+      array.style.backgroundColor = 'var(--darkfont-bg)';
     });  
     }
   }
@@ -141,7 +141,7 @@ function scrollFunction() {
     nav.style.backgroundColor = 'transparent';
     nav.style.color = 'var(--darkfont-bg)';
     btnlinearray.forEach((array) => {
-      array.style.backgroundColor = 'var(--lightfont-bg)';
+      array.style.backgroundColor = 'var(--darkfont-bg)';
     });  
     
   }
