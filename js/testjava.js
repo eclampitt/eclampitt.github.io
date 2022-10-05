@@ -37,7 +37,7 @@ function MblMenuBtn() {
     sidemenu.style.display = "none"
     body.style.overflow = "auto";
     btnlinearray.forEach((array) => {
-      array.style.backgroundColor = 'var(--lightfont-bg)';
+      array.style.backgroundColor = 'var(--darkfont-bg)';
     });  
     }
   }
@@ -139,9 +139,9 @@ function scrollFunction() {
     nav.style.transition  = "all .25s";
     nav.style.boxShadow = 'none';
     nav.style.backgroundColor = 'transparent';
-    nav.style.color = 'var(--lightfont-bg)';
+    nav.style.color = 'var(--darkfont-bg)';
     btnlinearray.forEach((array) => {
-      array.style.backgroundColor = 'var(--lightfont-bg)';
+      array.style.backgroundColor = 'var(--darkfont-bg)';
     });  
     
   }
@@ -216,7 +216,7 @@ function arrows() {
     arrowl.style.display= "initial";
     arrowr.style.display= "initial";
     processheader[0].innerHTML = "Design";
-    processdescription[0].innerHTML = "When the framework is approved we begin building the site from the ground up. This part of process is where all the heavy lifting happens.";
+    processdescription[0].innerHTML = "When the framework is approved we begin building the site from the ground up. This part of process is where all the heavy lifting happens. The design process will take the longest to complete.";
     }
   else if (count === 4) {
     arrowl.style.display= "initial";
