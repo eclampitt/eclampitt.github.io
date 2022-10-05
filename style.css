@@ -116,7 +116,7 @@ nav {
   align-items: center;
   background-color: transparent;
   box-shadow: none;
-  color:var(--bluefont-bg);
+  color:var(--darkfont-bg);
   display: flex;
   height: 80px;
   justify-content: space-between;
@@ -128,7 +128,7 @@ nav {
 .logo {
     padding-left: 10px;
     font-size: 1.5rem;
-    color: inherit;
+    color:var(--darkfont-bg);
     text-decoration: none;
 }
 
@@ -678,6 +678,13 @@ Section 5: Main
 }
 .pill-button:hover {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+  background-color: var(--lightfont-bg);
+  border: var(--darkfont-bg2) 1px solid;
+  color: var(--darkfont-bg2);
+}
+/*
+.pill-button:hover {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease-out;
   transform: translateY(-4px);
   background-color: var(--lightfont-bg);
@@ -688,6 +695,7 @@ Section 5: Main
   transition: all 0.3s ease-out;
   transform: translateY(0px);
 }
+*/
 .lite-button {
   background-color: var(--lightfont-bg);
   border: var(--darkfont-bg2) 2px solid;
@@ -1024,7 +1032,7 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   width: 100%;
   background-color: var(--darkfont-bg);
 }
-.blank h1, .blank p {
+.blank h1, .blank p,.blank-teal h1, .blank-teal p  {
   color: var(--lightfont-bg)
 }
 .blank-grey {
@@ -1034,6 +1042,11 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
 .blank-grey h1{
   color: var(--darkfont-bg2)
 }
+.blank-teal {
+  width: 100%;
+  background-color: var(--triadteal);
+}
+
 .parallax-img-first {
   background-image: url(Images/blue-background-lite.jpg);
 }
@@ -1499,7 +1512,7 @@ Section 5: Main
   object-fit: fill;
 }
 .package {
-  padding: 40px 30px; /* top | right | bottom | left */
+  padding: 40px 25px; /* top | right | bottom | left */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1509,7 +1522,7 @@ Section 5: Main
   box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.2); /* offset-x | offset-y | blur-radius | spread-radius | color */
   border-radius: 5px;
   border-top: 5px var(--bluefont-bg) solid;
-  margin: 0px 20px;
+  margin: 0px 10px;
   width: 300px;
   height: 500px;
   background: var(--lightfont-bg);
@@ -1629,7 +1642,7 @@ Section 5: Main
   display: inline;
 }
 .pitem i {
-  margin-right: 15px;
+  margin-right: 10px;
   color: var(--bluefont-bg);
 }
 .package button {
@@ -1702,7 +1715,7 @@ input[type=text], select, textarea {
   input[type=submit]:hover {
     background-color: var(--litegreyfont-bg);
     color: var(--darkfont-bg);
-    border: 5px solid var(--darkfont-bg);
+    border: 1px solid var(--darkfont-bg);
   }
   
   /* Add a background color and some padding around the form */
@@ -1820,7 +1833,7 @@ footer h6 {
 
 .footer-links a:active,.footer-links a:focus,.footer-links a:hover
 {
-  color: var(--hyperlinkclr);
+  color: var(--lightfont-bg);
   text-decoration:none;
 }
 
