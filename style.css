@@ -649,18 +649,21 @@ section {
   bottom: 10px; /* Place the button at the bottom of the page */
   right: 10px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
+  border: 1px solid var(--darkfont-bg); /* Remove borders */
   outline: none; /* Remove outline */
-  background-color: var(--bluefont-bg); /* Set a background color */
+  background-color: var(--lightfont-bg); /* Set a background color */
   opacity: .8;
-  color:var(--lightfont-bg); /* Text color */
+  color:var(--darkfont-bg); /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
+  padding: 10px; /* Some padding */
+  border-radius: 50%; /* Rounded corners */
+  height: 50px;
+  width: 50px;
 }
 
 #totop:hover {
-  background-color: var(--greyfont-bg) /* Add a dark-grey background on hover */
+  background-color: var(--darkfont-bg); /* Add a dark-grey background on hover */
+  color:var(--lightfont-bg); 
 }
 
 /************************************
