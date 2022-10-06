@@ -2232,6 +2232,9 @@ Section 8: Media Devices Content Styling
     padding-bottom: 50px;
     justify-content: start;
   }
+  .compare{
+  margin: 0px 10px;
+  }
   #benefits .half-bottom{
     padding-bottom: 100px;
   }
