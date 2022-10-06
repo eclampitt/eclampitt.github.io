@@ -311,7 +311,7 @@ section {
 }
 .sub-section-sm {
   height: 30vh;
-  min-height: 20vh;
+  min-height: 525px;
 }
 .sub-section-xsm {
   height: 20vh;
@@ -546,7 +546,7 @@ section {
   padding-top: 50px;
 }
 .bottom {
-  padding-bottom: 200px;
+  padding-bottom: 50px;
 }
 .margin-top-bottom {
   margin: 150px 0px;
