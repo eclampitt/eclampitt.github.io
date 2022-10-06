@@ -1045,6 +1045,7 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
 }
 #form-section {
   background-color: var(--litegreyfont-bg);
+  height: 125vh;
 }
 .form-info {
   padding: 20px;
