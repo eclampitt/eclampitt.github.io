@@ -59,6 +59,7 @@ Section 2: Variables
     --darkfont-bg2-rgb: 51, 53, 61;
     --lightfont-bg:white;
     --offwhitefont-bg: rgb(229, 229, 229);
+    --med-bluefont-bg: #d3f6ff;
     --bluefont-bg: #50c6db;
     --bluefont-bg-rgb: 80, 198, 219;
     --bluelitefont-bg:  #dffaff;
@@ -96,7 +97,7 @@ p *{
 }
 .giant-header {
   font-size: 6rem;
-  padding: 20px 0px;
+  padding: 5px 0px;
 }
 
 /************************************
@@ -126,9 +127,9 @@ nav {
 }
 
 .logo {
-    padding-left: 10px;
+    padding-left: 30px;
     font-size: 1.5rem;
-    color:var(--darkfont-bg);
+    color:var(--bluefont-bg);
     text-decoration: none;
 }
 
@@ -288,7 +289,7 @@ section {
   width: 100%;
 }
 .sub-section-content-left {
-  padding-right: 10px;
+  padding-right: 20px;
 }
 .sub-section {
   height: 35vh;
@@ -319,11 +320,16 @@ section {
   height: 10vh;
 }
 .sub-section-content {
-  margin: 0 auto;
   min-width: 350px;
   text-align: center;
   width: 100%;
+  height: 100%;
   padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 #sub-section-content-main {
   height: 100%;
@@ -347,15 +353,19 @@ section {
 }
 .sub-section-content h3, .benefit-header h3{
   font-size: 1.15rem;
-  line-height: 1.75;
+  line-height: 2;
   color: Var(--greyfont-bg);
-  margin-top: 10px;
+  padding-bottom: 10px;
 }
 .sub-section-content h4{
   font-size: 1.1rem;
-  line-height: 1.75;
+  line-height: 2;
   letter-spacing: 4px;
   color: var(--bluefont-bg);
+  padding-bottom: 10px;
+}
+.sub-section-content p{
+  line-height: 2;
 }
 .half-container {
   display: flex;
@@ -418,8 +428,8 @@ section {
   background: var(--bluefont-bg);
   position: relative;
   z-index: 1;
-  left: 10px;
-  margin: 5px 0px;
+  left: 0px;
+  margin: 5px 0px 15px;
 }
 .divider-vertical {
   display: inline-block;
@@ -433,7 +443,7 @@ section {
 }
 .divider:before {
   position: absolute;
-  left: -15px;
+  right: -15px;
   top: 0;
   content: "";
   height: 2px;
@@ -553,14 +563,22 @@ section {
   border-radius: 5px;
 }
 .highlight-inline-blue{
-  background: linear-gradient(to right, var(--bluefont-bg), var(--bluelitefont-bg));
+  background: linear-gradient(to right, var(--bluefont-bg), var(--splitcompblue), var(--bluefont-bg));
   color: var(--lightfont-bg);
-  min-width: fit-content;
+  width: fit-content;
   padding:5px;
   border-radius: 5px;
 }
 .highlight-text{
   color: linear-gradient(to right, var(--bluefont-bg), var(--splitcompblue), var(--splitcomppink));
+}
+#vs-header{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+#vs-header-section{
+  background-color: var(--litegreyfont-bg);
 }
 .bold-text{
   font-weight: bold;
@@ -593,11 +611,13 @@ section {
   position: absolute;
   width: 100%;
   left: 0px;
-  top: 200px;
-  padding: 40px 50px;
-  background-color: #000000ad;
+  top: 180px;
+  padding: 30px 50px;
+  /*background-color: #000000ad;*/
+  color: var(--darkfont-bg);
   text-align: left;
 }
+
 .hero-content-small {
   position: absolute;
   width: 100%;
@@ -605,7 +625,8 @@ section {
   margin: 0 auto;
   padding: 40px 50px;
   text-align: center;
-  color: var(--lightfont-bg);
+  color: var(--darkfont-bg);
+  font-weight: bold;
 }
 
 .dual-button-container {
@@ -653,9 +674,22 @@ Section 5: Main
 }
 
 #main1 {
-  color: var(--lightfont-bg);
+  color: var(--darkfont-bg);
   height: 100vh;
+  /*height: 100vh;*/
   min-height: 550px;
+  background: var(--med-bluefont-bg);
+  position: relative;
+  overflow: hidden;
+}
+#submain{
+  color: var(--darkfont-bg);
+  height: 30vh;
+  /*height: 100vh;*/
+  min-height: 250px;
+  background: var(--med-bluefont-bg);
+  position: relative;
+  overflow: hidden;
 }
 
 .pill-button {
@@ -725,7 +759,26 @@ Section 5: Main
   border: var(--bluefont-bg) 2px solid;
   color: var(--bluefont-bg);
 }
-
+.blue-hollow-button {
+  background-color: transparent;
+  border: var(--bluefont-bg) 2px solid;
+  color: var(--bluefont-bg);
+}
+.blue-hollow-button:hover {
+  background-color: var(--bluefont-bg);
+  color: var(--lightfont-bg);
+  border: none;
+}
+.teal-hollow-button {
+  background-color: transparent;
+  border: var(--lightfont-bg) 2px solid;
+  color: var(--lightfont-bg);
+}
+.teal-hollow-button:hover {
+  background-color: var(--lightfont-bg);
+  color: var(--triadteal);
+  border: none;
+}
 
 
 /************************************
@@ -735,6 +788,8 @@ Section 5: Main
 ************************************/
 #arrow-cta {
   height: fit-content;
+  width: 100%;
+  border-radius: 5px;
 }
 #project-cta {
   position: relative;
@@ -824,13 +879,19 @@ Section 5: Main
     Section 5.1.1: Parallax
 https://codepen.io/DuskoStamenic/pen/ZEvBKdw
 ************************************/
+#logo-img {
+  height: 200px;
+  width: 500px;
+}
 .half-img {
   height: 500px;
   width: 400px;
   object-fit: cover;
   border-radius: 10px;
-  position: relative;
   z-index: 4;
+}
+#author-img{
+  position: relative;
 }
 .contact-img {
   height: 575px;
@@ -887,44 +948,60 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   width: 100%;
   border-bottom: 2px dotted var(--bluefont-bg);
 }
-.author-header{
-  display: flex;
-  align-content: top;
+.main-header-bg{
+  height: 525px;
+  width: 425px;
+  border: 2px solid var(--triadpink);
+  border-radius: 10px;
+  z-index: 0;
+  position:absolute;
 }
 .author-header-bg{
   height: 525px;
   width: 425px;
   background-color: var(--bluefont-bg);
-  position:absolute;
   border-radius: 10px;
   transform: rotate(2deg);
-  top: 0;
-  left: 0;
+  z-index: 0;
+  position:absolute;
+  /*
+  position:absolute;
+  top: -15px;
+  left: 200px;
+  */
   animation: teeter 5s ease-in-out infinite;
 }
 .author-header-bg2{
   height: 540px;
   width: 425px;
   background-color: var(--bluelitefont-bg);
-  position:absolute;
   border-radius: 10px;
   transform: rotate(-2deg);
-  top: 0;
-  left: 0;
-  right: 240px;
+  z-index: 0;
+  position:absolute;
+    /*
+  top: -15px;
+  left: 200px;
+    */
   animation: teeter-opposite 5s ease-in-out infinite;
 }
 .author-header-bg3{
   height: 475px;
   width: 400px;
   border: 5px dotted var(--bluelitefont-bg);
-  position:absolute;
   border-radius: 10px;
   z-index:5;
   transform: rotate(3deg);
-  top: 0;
-  left: 0;
-  right: 240px;
+  z-index: 5;
+  position:absolute;
+}
+.service-header-bg{
+  height: 525px;
+  width: 425px;
+  background-color: var(--bluefont-bg);
+  border-radius: 10px;
+  z-index: 0;
+  position:absolute;
 }
 .dotted-border{
   width: 60%;
@@ -933,8 +1010,9 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   border-bottom: 10px dotted var(--bluelitefont-bg);
 }
 .half-img-container{
-  margin: 0 auto;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .contact-block-bg{
   height: 90%;
@@ -963,12 +1041,15 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   font-weight: bold;
 }
 #form-section {
-  height: 125vh;
   background-color: var(--litegreyfont-bg);
 }
 .form-info {
   padding: 20px;
   box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.2); /* offset-x | offset-y | blur-radius | spread-radius | color */
+}
+#about {
+  position: relative;
+  overflow: hidden;
 }
 #about-back-img {
   position: absolute;
@@ -1061,14 +1142,43 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
 
 #quote{
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: var(--lightfont-bg);
+  min-height: 275px;
 }
 .quote-bg-img {
-  position:absolute;
-  background-color: var(--litegreyfont-bg);
+  width:100%;
   height: 100%;
-  width: 100%;
-  z-index: -1;
+  opacity: 75%;
+  object-fit: cover;
+  position: absolute;
+  background-position: center;
+  background-image: url(Images/blue-background-lite.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+.quote-container{
+  position:relative;
+  z-index: 1;
+}
+
+.quote-container h1::before {
+  font-family: Georgia, serif;
+  content: '\201C';
+  color: var(--lightfont-bg);
+  font-size: 7.5em;
+  font-weight: 700;
+  opacity: .3;
+  position: absolute;
+  top: -80px;
+  left: -20px;    
+  text-shadow: none;
+  z-index: -300;
+}
+
 /************************************
  Section 5: Main 
   Section 5.1: Index Page
@@ -1080,8 +1190,10 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
 .services-content {
   display: grid;
   flex-wrap: wrap;
-  grid-template-columns: repeat(4, 1fr); 
+  grid-template-columns: repeat(3, 1fr); 
   grid-template-rows: repeat(2, 1fr); 
+  /*grid-template-columns: repeat(4, 1fr); 
+  grid-template-rows: repeat(2, 1fr); */
   row-gap: 20px;
   column-gap: 20px;
   height: 100%;
@@ -1168,6 +1280,9 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   align-items: center;
   flex-direction: column;
   position: relative;
+  border: 2px dotted var(--bluefont-bg);
+  border-radius: 10px;
+  box-shadow: 0 0 20px 3px rgb(0 0 0 / 5%);
 }
 /*
 .border-slide{
@@ -1236,7 +1351,7 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   color: var(--bluefont-bg);
   text-decoration: none;
 }
-.services-content h3 {
+.services-content h4 {
   color: var(--bluefont-bg);
 }
 .services-content p {
@@ -1249,12 +1364,19 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   margin: 0 auto;
   grid-column: span 1;
   height: 350px;
-  width: 275px;
-  box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.2);
-  margin-bottom: 20px;
-  border-radius: 5px;
+  width: 400px;
+  box-shadow: 0 0 20px 3px rgb(0 0 0 / 5%);
   background-color: var(--lightfont-bg);
+  margin-bottom: 20px;
+  /*
+  border-radius: 5px;
   border-bottom: 4px solid var(--bluefont-bg);
+  */
+}
+.compare{
+  box-shadow: 0 0 20px 3px rgb(0 0 0 / 5%);
+  margin: 0px 50px;
+  padding: 20px;
 }
 .service-info {
   padding: 20px;
@@ -1264,7 +1386,7 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
 }
 
 .service-info-txt{
-  height: 230px;
+  height: 150px;
 }
 .service-info-txt h3{
   height: 70px;
@@ -1272,6 +1394,8 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
 .customer-info {
   display: flex;
   flex-direction: column;
+  align-content: center;
+  justify-content: center;
   height: 100%;
   color: var(--greyfont-bg);
   line-height: 1.5;
@@ -1290,7 +1414,14 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   object-fit: fill;
 }
 .service-icon {
+  width: 100px;
+  height: 100px;
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--bluefont-bg);
 }
 .customer-img {
   height: 100px;
@@ -1303,8 +1434,14 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   display: inline;
   margin-bottom: 10px;
 }
+.learn-more a{ 
+  padding-right: 20px;
+}
 .learn-more:hover { 
   cursor: pointer;
+  color: var(--bluefont-bg);
+}
+.learn-more a:hover { 
   color: var(--bluefont-bg);
 }
 .learn-more:hover > .learnarrow { 
@@ -1333,10 +1470,6 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   width: 110%;
 }
 
-.service-info i {
- padding-left: 15px;
-}
-
 .services-title {
   position: relative;
   margin: 10px 0px;
@@ -1359,20 +1492,17 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
 }
 
 .hero-bg-img{
-  width:100%;
-  height: 100%;
+  width:60%;
+  height: 60%;
   object-fit: cover;
   position: absolute;
-  right:  0px;
-  bottom: 0px;
-  z-index: -2;
-  background-position: center; /* Center the image */
-  background-color: #3f3f3f; /* Used if the image is unavailable */
-  background-image: url(Images/bluehour.jpg);
+  right:  5%;
+  bottom: 10%;
+  background-position: center;
+  background-image: url(Images/3-devices-white.png);
   background-repeat: no-repeat;
-  background-size: cover; /* Resize the background image to cover the entire container */
+  background-size: cover;
 }
-
 .benefits-content {
   position: relative;
 }
@@ -1399,13 +1529,18 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
 /************************************
 Benefits
 ************************************/
-
+#benefits{
+  background-color: var(--litegreyfont-bg);
+}
 
 .benefit-explanation {
   min-width: 300px;
 }
 .bitem {
   margin: 10px 0px;
+}
+.bitem .fa-xmark{
+  color: var(--triadpink);
 }
 .bitem i{
   display: inline;
@@ -1498,10 +1633,9 @@ Section 5: Main
     Section 5.1.4: Pricing Section
 ************************************/
 #packages {
-  padding: 100px 0px 50px; /* top | right | bottom | left */
+  padding: 20px 0px; /* top | right | bottom | left */
   position: relative;
   height: 100vh;
-  min-height: 1248px;
 }
 .process-img {
   z-index:-1;
@@ -1593,7 +1727,6 @@ Section 5: Main
 }
 .package h2 {
   text-align: center;
-  text-transform: uppercase;
   font-weight: 700;
 }
 
@@ -1626,7 +1759,6 @@ Section 5: Main
 .package h4 {
   text-align: center;
   width: 100%;
-  text-transform: uppercase;
   font-weight: 400;
 }
 
@@ -1649,7 +1781,7 @@ Section 5: Main
   margin-top:20px;
 }
 .packages-container {
-  margin: 100px 50px 50px; /* Top right/left bottom */
+  margin: 50px; /* Top right/left bottom */
 }
 
 .packages-container {
@@ -1661,7 +1793,9 @@ justify-content: center;
 Section 5: Main
   Section 5.2: About Page
 ************************************/
-
+.service-section{
+  height:80vh;
+}
 
 /************************************
 Section 5: Main
@@ -2055,12 +2189,21 @@ Section 8: Media Devices Content Styling
     grid-template-columns: repeat(2, 1fr); 
     grid-template-rows: repeat(3, 1fr); 
   }
-  .service-info-txt, .learn-more-container, .service-icon {
+  .service-info-txt, .learn-more-container{
     text-align: center;
+  }
+  .service-icon {
+    margin: 0 auto;
+    margin-bottom: 20px;
   }
   #services {
     height: fit-content;
    }
+  .service-section-half{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height:fit-content
+  }
   .half-container {
     flex-direction: column;
   }
@@ -2093,7 +2236,7 @@ Section 8: Media Devices Content Styling
   }
 
 
-  #about{
+  #about, .service-section{
   padding-top: 70px;
   padding-bottom: 70px;
   height: fit-content;
@@ -2121,6 +2264,10 @@ Section 8: Media Devices Content Styling
   .services-content {
     grid-template-columns: repeat(1, 1fr); 
     grid-template-rows: repeat(6, 1fr); 
+  }
+  .service {
+    height: 350px;
+    width: 350px;
   }
   .sixth-container-horizontal {
     grid-template-columns: 1fr; 
@@ -2154,7 +2301,6 @@ Section 8: Media Devices Content Styling
   .giant-header{
     font-size: 3rem;
   }
-
   .left {
     padding-left: 20px;
 
@@ -2180,14 +2326,14 @@ Section 8: Media Devices Content Styling
   .site-map {
     margin: 20px 0px 0px 0px; /* top | right | bottom | left */
   }
-  .half-img-container, .half-img{
+  .half-img{
     height: 400px;
     width: 300px;
   }
   .half-img-container{
     margin-top: 40px;
   }
-  .author-header-bg{
+  .author-header-bg, .main-header-bg, .service-header-bg{
     height: 425px;
     width: 325px;
   }
@@ -2210,7 +2356,6 @@ Section 8: Media Devices Content Styling
 
 /* Phone Styling */
 @media only screen and (max-width: 595px) {
-  
   .Top-Menu,.Top-Menu a, .Top-Menu .dropdown{
     display:none;
   }
@@ -2224,7 +2369,6 @@ Section 8: Media Devices Content Styling
     grid-template-columns: repeat(1, 1fr); 
     grid-template-rows: repeat(auto, 1fr); 
   }
-
   .dual-button-container {
     flex-direction: column;
     height: 160px;
@@ -2260,7 +2404,7 @@ Section 8: Media Devices Content Styling
     bottom: 100px;
     left: -25px;
   }
-  .author-header-bg{
+  .author-header-bg, .main-header-bg, .service-header-bg{
     height: 375px;
     width: 275px;
   }
@@ -2345,3 +2489,49 @@ Section 8: Media Devices Content Styling
   }
 }
 
+/*
+Random Designs
+*/
+
+.topshape {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  z-index: -1;
+  background-color: var(--litegreyfont-bg);
+  -webkit-clip-path: polygon(64% 0, 100% 0%, 100% 100%, 26% 100%);
+  clip-path: polygon(64% 0, 100% 0%, 100% 100%, 26% 100%);
+}
+
+.landing-circle {
+  position:absolute;
+  width: 200vh;
+  height: 200vh;
+  bottom:0;
+  left: 0;
+  opacity: 50%;
+  background-color: var(--litegreyfont-bg);
+  clip-path: polygon(0 81%, 0% 100%, 66% 100%);
+}
+.landing-parallelogram {
+  position:absolute;
+  width: 100vh;
+  height: 100vh;
+  bottom:0;
+  right: 0;
+  opacity: 50%;
+  background-color: var(--litegreyfont-bg);
+  clip-path: polygon(89% 0, 100% 0%, 100% 100%, 64% 100%);
+}
+.landing-parallelogram-back {
+  position:absolute;
+  width: 110vh;
+  height: 110vh;
+  bottom:0;
+  right: 0;
+  opacity: 50%;
+  background-color: var(--litegreyfont-bg);
+  clip-path: polygon(89% 0, 100% 0%, 100% 100%, 64% 100%);
+}
