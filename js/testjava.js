@@ -238,7 +238,7 @@ function arrows() {
 /************************************
 Section 5: Test JS - Benefits
 ************************************/
-
+/*
 const custom = document.getElementById("custom");
 const template = document.getElementById("template");
 
@@ -286,38 +286,47 @@ function templatedescr() {
   });
 }
 
+*/
 
+/************************************
+Section 5: Scroll Reveal
 
-  /************************************
-Section 5: Test JS - typing
-
-*Delete if Not Working*
+https://codepen.io/ShuvoK/pen/VwMvbbg
 ************************************/
 
+function scrollTrigger(selector, options = {}){
+  let els = document.querySelectorAll(selector)
+  els = Array.from(els)
+  els.forEach(el => {
+      addObserver(el, options)
+  })
+}
 
+function addObserver(el, options){
+  if(!('IntersectionObserver' in window)){
+      if(options.cb){
+          options.cb(el)
+      }else{
+          entry.target.classList.add('active')
+      }
+      return
+  }
+  let observer = new IntersectionObserver((entries, observer) => { //this takes a callback function which receives two arguments: the elemts list and the observer instance
+      entries.forEach(entry => {
+          if(entry.isIntersecting){
+              if(options.cb){
+                  options.cb(el)
+              }else{
+                  entry.target.classList.add('active')
+              }
+              observer.unobserve(entry.target)
+          }
+      })
+  }, options)
+  observer.observe(el)
+}
+// Example usages:
 
-//https://codepen.io/patriciamolnar/pen/jOMjePz
-
-//https://codepen.io/psdr03/pen/exMPyY
-//https://codepen.io/zd12t4nt/pen/mdBYNza
-
- //https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect
- //window.addEventListener('scroll', reveal)
- //let relPoint = 150;
- //reveal();
-
- //function reveal() {
-  
-  // let box = document.getElementsByClassName('box-hidden')
-  // for (let i = 0 ; box.length; i++) {
-   //  var windowheight = window.innerHeight;
-  //   var boxTop = box[i].getBoundingClientRect().top;
-  //   var boxBottom = box[i].getBoundingClientRect().bottom;
-   //  if (boxTop < windowheight - relPoint) {
-   //    box[i].classList.add('box')
-   //  } else {
-    //   box[i].classList.remove('box')
-   //  }
-  // }
- //}
-
+scrollTrigger('.scroll-reveal', {
+  rootMargin: '-100px',
+})
