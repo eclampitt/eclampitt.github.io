@@ -25,7 +25,8 @@
     <!--Import FA Icons-->
     <script src="https://kit.fontawesome.com/baab76043c.js" crossorigin="anonymous"></script>
     <!--Import JQuery-->
- 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
   </head>
 
 
@@ -95,18 +96,29 @@
   <div class="landing-parallelogram"></div>
   <div class="landing-parallelogram-back"></div>
 
-          <div class="hero-content">
-            <p class="bold-text blue-text">Web design + development</p>
-            <h1 class="giant-header">BlueHound</h1>
-            <p>A Chicago based Company with a focus on Small Businesses with <span class="bold-text" >big</span> ideas.<br>
-            Contact us today to learn more about our services and website solutions.</p>
-          
-              <button class="pill-button blue-hollow-button"><a href="./contact.html">Contact Us</a></button>
-          </div>
-          <!--<div class="hero-bg-img"></div>-->
+  <div class="circle updown"></div>
+  <div class="circle2 leftright"></div>
+  <div class="triangle-up teeter"></div>
+
+  <div class="half-container">
+    <div class="half left main-text">
+        <p class="bold-text blue-text">Web design + development</p>
+        <h1 class="giant-header">BlueHound</h1>
+        <p>A Chicago based Company with a focus on Small Businesses with <span class="bold-text" >big</span> ideas.<br>
+        Contact us today to learn more about our services and website solutions.</p>
+          <button class="pill-button blue-hollow-button"><a href="./contact.html">Contact Us</a></button>
+    </div>
+
+    <div class="half left-mini">
+      <div class="cover-img-container">
+        <!--<img src="Images/cover-photo.jpg" class="cover-img">-->
+      </div>
+    </div>
+  </div>
+
   </section>
 
-
+<!--
   <section class="sub-section-sm blank top-bottom" id="arrow-cta">
     <div class="sub-section-content" id="project-cta">
       <div class="sub-section-txt" id="above-arrow-content">
@@ -114,7 +126,7 @@
         <h3>Don't know where to start? We'll we can help! Check out some of our packages below</h3>
         <button class="pill-button"><a href="./contact.html">Contact Us</a></button>
       </div>
-      <!--
+  
       <div id="scroll-arrow" class="scroll-container">
         <a href="#packages">
           <span></span>
@@ -126,7 +138,7 @@
     </div>
   </section>
 
-  <section class="sub-section-sm">
+  <section class="sub-section-header">
     <div class="sub-section-content">
       <h4>Creative Offerings</h4>
       <h1 class="bold-only">Services We Provide our Clients</h1>
@@ -323,7 +335,7 @@
 
     <div class="half bottom" >
       <div class="half-img-container">
-        <img src="Images/web-design.jpg" class="half-img" id="author-img">
+        <img src="Images/Chicago.jpg" class="half-img" id="author-img">
         <div class="main-header-bg"></div>
       </div>
     </div>
@@ -369,14 +381,11 @@
 
 
 
-<section class="sub-section-sm">
+<section class="sub-section-header">
   <div class="sub-section-content">
     <h4>Everything You Need to get started</h4>
     <h1 class="bold-only">Packages</h1>
     <h3>Feel free to contact us as well with other design requirements not included in one of our packages.</h3>
-    <div class="button-container">
-      <button class="pill-button dark-button center"><a href="./contact.html">Contact Us</a></button>
-    </div>
   </div>
 </section>
 
@@ -384,22 +393,14 @@
 
   <div class="packages-container">
 
-    <div class="package">
+    <div class="package scroll-reveal reveal-container revealbottom">
       <h2>Basic</h2>
-      <h4>Starting At</h4>
-      <h3>50</h3>
+      <!--<h4>Starting At</h4>
+      <h3>50</h3>-->
       <div class="package-items">
         <div class="pitem learn-more"> 
           <i class="fa-solid fa-circle-arrow-right learnarrow"></i>
           <a>Static 1 pg site</a>
-        </div>
-        <div class="pitem learn-more"> 
-          <i class="fa-solid fa-circle-arrow-right learnarrow"></i>
-          <a>Website Maintenace</a>
-        </div>
-        <div class="pitem learn-more"> 
-          <i class="fa-solid fa-circle-arrow-right learnarrow"></i>
-          <a>Website Listings</a>
         </div>
         <div class="pitem learn-more"> 
           <i class="fa-solid fa-circle-arrow-right learnarrow"></i>
@@ -409,16 +410,24 @@
           <i class="fa-solid fa-circle-arrow-right learnarrow"></i>
           <a>Mobile Responsive</a>
         </div>
-        <!--<button class="pill-button blue-fill-button" href="./contact.html" type="button">Purchase</button>-->
+        <div class="pitem learn-more"> 
+          <i class="fa-solid fa-circle-arrow-right learnarrow"></i>
+          <a>Browser Compatible</a>
+        </div>
+        <div class="pitem learn-more"> 
+          <i class="fa-solid fa-circle-arrow-right learnarrow"></i>
+          <a>W3C Certified HTML</a>
+        </div>
+        <button class="pill-button blue-fill-button" href="./contact.html" type="button">Learn More</button>
       </div>
     </div>
 
-    <div class="package" id="package2">
+    <div class="package scroll-reveal reveal-container revealbottom" id="package2">
       <div class="ribbon ribbon-top-right">
       <span>Best Value</span></div>
       <h2>Standard</h2>
-      <h4>Starting At</h4>
-      <h3>100</h3>
+      <!--<h4>Starting At</h4>
+      <h3>100</h3>-->
       <div class="package-items">
         <div class="pitem learn-more"> 
           <i class="fa-solid fa-circle-arrow-right learnarrow"></i>
@@ -430,24 +439,24 @@
         </div>
         <div class="pitem learn-more"> 
           <i class="fa-solid fa-circle-arrow-right learnarrow"></i>
-          <a>TBD</a>
+          <a>Hosting Included</a>
         </div>
         <div class="pitem learn-more"> 
           <i class="fa-solid fa-circle-arrow-right learnarrow"></i>
-          <a>TBD</a>
+          <a>Website Listings</a>
         </div>
         <div class="pitem learn-more"> 
           <i class="fa-solid fa-circle-arrow-right learnarrow"></i>
-          <a>TBD</a>
+          <a>Website Maintenace</a>
         </div>
-        <!--<button class="pill-button blue-fill-button" href="./contact.html" type="button">Purchase</button>-->
+        <button class="pill-button blue-fill-button" href="./contact.html" type="button">Learn More</button>
       </div>
     </div>
 
-    <div class="package"id="package3">
+    <div class="package scroll-reveal reveal-container revealbottom"id="package3">
       <h2>Premium</h2>
-      <h4>Starting At</h4>
-      <h3>150</h3>
+      <!--<h4>Starting At</h4>
+      <h3>150</h3>-->
       <div class="package-items">
         <div class="pitem learn-more"> 
           <i class="fa-solid fa-circle-arrow-right learnarrow"></i>
@@ -467,18 +476,18 @@
         </div>
         <div class="pitem learn-more"> 
           <i class="fa-solid fa-circle-arrow-right learnarrow"></i>
-          <a>CMS Setup</a>
+          <a>Website Animations</a>
         </div>
-        <!--<button class="pill-button blue-fill-button" href="./contact.html" type="button">Purchase</button>-->
+        <button class="pill-button blue-fill-button" href="./contact.html" type="button">Learn More</button>
       </div>
+
     </div>
 
   </div> 
 
   </section>
 
-  <section class="parallax parallax-sm parallax-img-second"></section>
-
+ <!-- <section class="parallax parallax-sm parallax-img-second"></section>-->
 
   <section class="sub-section-sm top-bottom" id="main-cta">
     <div class="sub-section-content" id="sub-section-content-main">
@@ -525,10 +534,8 @@
         <div class="footer-links">
           <h6>Contact</h6>
           <p><span class="blue-text">BlueHound</span><br>
-            123 Main Street<br>
-            Anywhere, USA
+            <a class="contact-hyper" href="mailto:contact@bluehoundweb.com">contact@bluehoundweb.com</a>
           </p>
-          <p>888-888-8888</p>
         </div>
 
       </div>
@@ -539,7 +546,7 @@
 <hr class="center-line">
 
 <div class="footer-bottom">
-        <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
+        <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by 
         <a href="./index.html"><span class="blue-text">BlueHound</span></a>.
         </p>
 </footer>

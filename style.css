@@ -73,6 +73,7 @@ Section 2: Variables
     --triadpink:#DB679B;
     --splitcompblue:#5C85DB;
     --splitcomppink:#DB7A67;
+    --greencheck:#34ef37;
   }
 
 /************************************
@@ -299,6 +300,9 @@ section {
   justify-content: center;
   align-items: center;
 }
+.sub-section-xlg {
+  height: 70vh;
+}
 .sub-section-lg {
   height: 60vh;
 }
@@ -318,6 +322,10 @@ section {
 }
 .sub-section-xxsm {
   height: 10vh;
+}
+.sub-section-header {
+  height: 20vh;
+  min-height: 300px;
 }
 .sub-section-content {
   min-width: 350px;
@@ -535,9 +543,14 @@ section {
   font-weight: bold;
   color: var(--bluefont-bg);
 }
-
+.left-mini {
+  padding-left: 50px;
+}
 .left {
   padding-left: 150px;
+}
+.right-mini {
+  padding-right: 50px;
 }
 .right {
   padding-right: 150px;
@@ -598,7 +611,9 @@ section {
   justify-content: center;
   align-items: left;
 }
-
+.main-text {
+  z-index: 5;
+}
 .hero-text{
   font-size: 4rem;
   letter-spacing: 2;
@@ -609,7 +624,6 @@ section {
 }
 .hero-content {
   position: absolute;
-  width: 100%;
   left: 0px;
   top: 180px;
   padding: 30px 50px;
@@ -675,6 +689,11 @@ Section 5: Main
   width: 100%;
   object-fit: contain;
 }
+#heroimg {
+  height: 400px;
+  width: 350px;
+  object-fit: contain;
+}
 
 #main1 {
   color: var(--darkfont-bg);
@@ -683,7 +702,7 @@ Section 5: Main
   min-height: 550px;
   background: var(--med-bluefont-bg);
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 #submain{
   color: var(--darkfont-bg);
@@ -893,6 +912,18 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   border-radius: 10px;
   z-index: 4;
 }
+.cover-img{
+  left:10px;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  z-index: 1;
+}
+.cover-img-container{
+  height: 100%;
+  width: 100%;
+}
 #author-img{
   position: relative;
 }
@@ -998,14 +1029,7 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   z-index: 5;
   position:absolute;
 }
-.service-header-bg{
-  height: 525px;
-  width: 425px;
-  background-color: var(--bluefont-bg);
-  border-radius: 10px;
-  z-index: 0;
-  position:absolute;
-}
+
 .dotted-border{
   width: 60%;
   margin: 0 auto;
@@ -1160,7 +1184,8 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   object-fit: cover;
   position: absolute;
   background-position: center;
-  background-image: url(Images/blue-background-lite.jpg);
+  /*background-image: url(Images/blue-background-lite.jpg);*/
+  background-color: var(--bluefont-bg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1391,6 +1416,7 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
 
 .service-info-txt{
   height: 150px;
+  margin-bottom: 10px;
 }
 .service-info-txt h3{
   height: 70px;
@@ -1496,14 +1522,14 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
 }
 
 .hero-bg-img{
-  width:60%;
-  height: 60%;
-  object-fit: cover;
+  width:400px;
+  height: 332px;
+  object-fit: contain;
   position: absolute;
   right:  5%;
   bottom: 10%;
   background-position: center;
-  background-image: url(Images/3-devices-white.png);
+  background-image: url(Images/hero-img.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1535,6 +1561,8 @@ Benefits
 ************************************/
 #benefits{
   background-color: var(--litegreyfont-bg);
+  padding-bottom: 20px;
+  min-height: 500px;
 }
 
 .benefit-explanation {
@@ -1639,7 +1667,7 @@ Section 5: Main
 #packages {
   padding: 20px 0px; /* top | right | bottom | left */
   position: relative;
-  height: 100vh;
+  height: 50vh;
 }
 .process-img {
   z-index:-1;
@@ -1662,16 +1690,10 @@ Section 5: Main
   border-top: 5px var(--bluefont-bg) solid;
   margin: 0px 10px;
   width: 300px;
-  height: 500px;
+  height: 450px;
   background: var(--lightfont-bg);
 }
-#package2{
-  height: 525px;
-  position: relative;
-}
-#package3{
-  height: 550px;
-}
+
 /* common */
 .ribbon {
   width: 150px;
@@ -1771,6 +1793,10 @@ Section 5: Main
   flex-direction: column;
   justify-content: left;
 }
+.pitem .fa-circle-plus{
+  color:var(--greencheck);
+  transform: translateX(-10px);
+}
 .pitem{
   padding: 2px 0px;
 }
@@ -1785,7 +1811,7 @@ Section 5: Main
   margin-top:20px;
 }
 .packages-container {
-  margin: 50px; /* Top right/left bottom */
+  margin: 0px 50px; /* Top right/left bottom */
 }
 
 .packages-container {
@@ -1798,7 +1824,9 @@ Section 5: Main
   Section 5.2: About Page
 ************************************/
 .service-section{
-  height:80vh;
+  height:70vh;
+  padding-bottom: 20px;
+  min-height: 650px;
 }
 
 /************************************
@@ -2057,6 +2085,10 @@ Section 7: Misc Code for testing
 /************************************
 Section 7: Testing Step container
 ************************************/
+.process-description{
+  width: 700px;
+  min-width: 200px;
+}
 .process-content{
   display: flex;
   flex-direction: column;
@@ -2232,17 +2264,12 @@ Section 8: Media Devices Content Styling
     padding-bottom: 50px;
     justify-content: start;
   }
-  .compare{
-  margin: 0px 10px;
-  }
   #benefits .half-bottom{
     padding-bottom: 100px;
   }
   #benefits {
     height: fit-content;
   }
-
-
   #about, .service-section{
   padding-top: 70px;
   padding-bottom: 70px;
@@ -2273,8 +2300,8 @@ Section 8: Media Devices Content Styling
     grid-template-rows: repeat(6, 1fr); 
   }
   .service {
-    height: 350px;
-    width: 350px;
+    height: 400px;
+    width: 325px;
   }
   .sixth-container-horizontal {
     grid-template-columns: 1fr; 
@@ -2308,7 +2335,7 @@ Section 8: Media Devices Content Styling
   .giant-header{
     font-size: 3rem;
   }
-  .left {
+  .left, .left-mini {
     padding-left: 20px;
 
   }
@@ -2424,7 +2451,7 @@ Section 8: Media Devices Content Styling
     width: 250px;
   }
   
-  .left {
+  .left, .left-mini {
     padding-left: 10px;
     
   }
@@ -2495,6 +2522,9 @@ Section 8: Media Devices Content Styling
 
   }
 }
+.teeter {
+  animation: teeter 5s ease-in-out infinite;
+}
 
 /*
 Random Designs
@@ -2541,4 +2571,84 @@ Random Designs
   opacity: 50%;
   background-color: var(--litegreyfont-bg);
   clip-path: polygon(89% 0, 100% 0%, 100% 100%, 64% 100%);
+}
+.par-img {
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+.par-img-opp {
+  clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
+}
+
+
+.triangle-up {
+  position:absolute;
+  z-index: 2;
+  top:10%;
+  left: 30%;
+  width: 0;
+  height: 0;
+  border-left: 12.5px solid transparent;
+  border-right: 12.5px solid transparent;
+  border-bottom: 25px solid var(--bluefont-bg);
+  opacity: 50%;
+}
+
+.circle {
+  position:absolute;
+  top:10%;
+  right: 25%;
+  z-index: 2;
+  width: 25px;
+  height: 25px;
+  background: var(--bluefont-bg);
+  border-radius: 50%;
+  opacity: 50%;
+}
+.circle2 {
+  position:absolute;
+  bottom:5%;
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  background: var(--bluefont-bg);
+  border-radius: 50%;
+  opacity: 50%;
+}
+
+.square {
+  position:absolute;
+  bottom:30%;
+  left: 15%;
+  z-index: 2;
+  width: 15px;
+  height: 15px;
+  background: var(--bluefont-bg);
+  opacity: 50%;
+  transform: rotate(-30deg);
+}
+
+
+
+.reveal-container{
+  transition: transform 1s, opacity 0.5s;
+}
+.reveal-container.revealleft{
+  transform: translateX(-200px);
+  opacity: 0;
+}
+.reveal-container.revealright{
+  transform: translateX(200px);
+  opacity: 0;
+}
+.reveal-container.revealtop{
+  transform: translateY(-200px);
+  opacity: 0;
+}
+.reveal-container.revealbottom{
+  transform: translateY(200px);
+  opacity: 0;
+}
+.reveal-container.active{
+  transform: translateX(0);
+  opacity: 1;
 }
