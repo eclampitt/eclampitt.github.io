@@ -58,6 +58,7 @@ Section 2: Variables
     --darkfont-bg2: rgb(51, 53, 61);
     --darkfont-bg2-rgb: 51, 53, 61;
     --lightfont-bg:white;
+    --lightfont-bg-rgb: 255, 255, 255;
     --offwhitefont-bg: rgb(229, 229, 229);
     --med-bluefont-bg: #d3f6ff;
     --bluefont-bg: #50c6db;
@@ -445,6 +446,7 @@ section {
   height: 50px;
   background: var(--bluefont-bg);
   position: relative;
+  align-self: center;
   z-index: 1;
   left: 10px;
   margin: 5px 0px;
@@ -456,15 +458,6 @@ section {
   content: "";
   height: 2px;
   width: 10px;
-  background: var(--bluefont-bg);
-}
-.divider-vertical:before {
-  position: absolute;
-  left: 0px;
-  top: -15px;
-  content: "";
-  height: 10px;
-  width: 2px;
   background: var(--bluefont-bg);
 }
 #plane-section{
@@ -611,8 +604,49 @@ section {
   justify-content: center;
   align-items: left;
 }
-.main-text {
-  z-index: 5;
+.big-txt-circle {
+  z-index: 4;
+  opacity: 80%;
+  background-color: var(--lightfont-bg);
+  position:absolute;
+  top: 10%;
+  left: 0%;
+  border-radius: 50%;
+  height: 600px;
+  width:600px;
+}
+.main-txt-circle {
+  z-index: 4;
+  opacity: 90%;
+  background-color: var(--lightfont-bg);
+  position:absolute;
+  bottom: 10%;
+  left: 6%;
+  border-radius: 50%;
+  height: 400px;
+  width:400px;
+}
+.main-txt-circle2 {
+  z-index: 4;
+  opacity: 70%;
+  background-color: var(--bluelitefont-bg);
+  position:absolute;
+  bottom: 10%;
+  left: 35%;
+  border-radius: 50%;
+  height: 400px;
+  width:400px;
+}
+.main-txt-circle3 {
+  z-index: 4;
+  opacity: 75%;
+  background-color: var(--lightfont-bg);
+  position:absolute;
+  bottom: 30%;
+  left: 40%;
+  border-radius: 50%;
+  height: 300px;
+  width:300px;
 }
 .hero-text{
   font-size: 4rem;
@@ -626,10 +660,12 @@ section {
   position: absolute;
   left: 0px;
   top: 180px;
-  padding: 30px 50px;
+  padding: 30px 50px 30px 150px;  /*Top Right Bottom Left*/
   /*background-color: #000000ad;*/
   color: var(--darkfont-bg);
   text-align: left;
+  z-index: 6;
+  /*background-color: rgba(var(--lightfont-bg-rgb), 0.90);*/
 }
 
 .hero-content-small {
@@ -697,10 +733,10 @@ Section 5: Main
 
 #main1 {
   color: var(--darkfont-bg);
-  height: 100vh;
+  height: 110vh;
   /*height: 100vh;*/
   min-height: 550px;
-  background: var(--med-bluefont-bg);
+  /*background: var(--med-bluefont-bg);*/
   position: relative;
   overflow-x: hidden;
 }
@@ -811,7 +847,6 @@ Section 5: Main
 #arrow-cta {
   height: fit-content;
   width: 100%;
-  border-radius: 5px;
 }
 #project-cta {
   position: relative;
@@ -1112,7 +1147,19 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   background-position: center;
   background-attachment: fixed; /*  Parallax event  */
 }
-
+.parallax-md {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /*  Parallax event  */
+}
 .parallax-sm-md {
   text-align: center;
   width: 100%;
@@ -1136,6 +1183,14 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /*  Parallax event  */
+}
+.parallax-txt-box{
+  position:absolute;
+  left: 10%;
+  bottom:20%;
+  background-color: var(--lightfont-bg);
+  padding: 15px;
+  width: 40%;
 }
 .blank {
   width: 100%;
@@ -1174,7 +1229,6 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  color: var(--lightfont-bg);
   min-height: 275px;
 }
 .quote-bg-img {
@@ -1185,7 +1239,6 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   position: absolute;
   background-position: center;
   /*background-image: url(Images/blue-background-lite.jpg);*/
-  background-color: var(--bluefont-bg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1522,17 +1575,28 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
 }
 
 .hero-bg-img{
-  width:400px;
-  height: 332px;
-  object-fit: contain;
+  width:100%;
+  height: 100%;
+  object-fit: cover;
   position: absolute;
-  right:  5%;
-  bottom: 10%;
-  background-position: center;
-  background-image: url(Images/hero-img.png);
+  right:  0px;
+  bottom: 0px;
+  z-index: -2;
+  background-position: center; 
+  background-color: #3f3f3f; 
+  background-image: url(Images/collab4.jpg);
+  /*border-radius: 0 0 90% 90% / 15em;*/
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; 
+  clip-path: circle(50% at 82% 73%);
 }
+
+.gradient-bg {
+  z-index:-1;
+  background: var(--bluelitefont-bg);
+}
+
+
 .benefits-content {
   position: relative;
 }
@@ -1564,7 +1628,11 @@ Benefits
   padding-bottom: 20px;
   min-height: 500px;
 }
-
+#indexmain{
+  padding-bottom: 20px;
+  padding-top: 20px;
+  min-height: 500px;
+}
 .benefit-explanation {
   min-width: 300px;
 }
@@ -1667,7 +1735,6 @@ Section 5: Main
 #packages {
   padding: 20px 0px; /* top | right | bottom | left */
   position: relative;
-  height: 50vh;
 }
 .process-img {
   z-index:-1;
@@ -1824,7 +1891,7 @@ Section 5: Main
   Section 5.2: About Page
 ************************************/
 .service-section{
-  height:70vh;
+  height:60vh;
   padding-bottom: 20px;
   min-height: 650px;
 }
@@ -2086,7 +2153,6 @@ Section 7: Misc Code for testing
 Section 7: Testing Step container
 ************************************/
 .process-description{
-  width: 700px;
   min-width: 200px;
 }
 .process-content{
@@ -2213,6 +2279,139 @@ Section 8: Coming soon section
   height:100%;
 }
 
+/*
+Random Designs
+*/
+
+.topshape {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  z-index: -1;
+  background-color: var(--litegreyfont-bg);
+  -webkit-clip-path: polygon(64% 0, 100% 0%, 100% 100%, 26% 100%);
+  clip-path: polygon(64% 0, 100% 0%, 100% 100%, 26% 100%);
+}
+
+.landing-circle {
+  position:absolute;
+  width: 200vh;
+  height: 200vh;
+  bottom:0;
+  left: 0;
+  opacity: 50%;
+  background-color: var(--litegreyfont-bg);
+  clip-path: polygon(0 81%, 0% 100%, 66% 100%);
+}
+.landing-parallelogram {
+  position:absolute;
+  width: 100vh;
+  height: 100vh;
+  bottom:0;
+  right: 0;
+  opacity: 50%;
+  background-color: var(--litegreyfont-bg);
+  clip-path: polygon(89% 0, 100% 0%, 100% 100%, 64% 100%);
+}
+.landing-parallelogram-back {
+  position:absolute;
+  width: 110vh;
+  height: 110vh;
+  bottom:0;
+  right: 0;
+  opacity: 50%;
+  background-color: var(--litegreyfont-bg);
+  clip-path: polygon(89% 0, 100% 0%, 100% 100%, 64% 100%);
+}
+.par-img {
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+.par-img-opp {
+  clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
+}
+.circle-img {
+  border-radius: 50%;
+  height:400px;
+  width: 400px;
+}
+
+
+.triangle-up {
+  position:absolute;
+  z-index: 2;
+  top:10%;
+  left: 30%;
+  width: 0;
+  height: 0;
+  border-left: 12.5px solid transparent;
+  border-right: 12.5px solid transparent;
+  border-bottom: 25px solid var(--bluefont-bg);
+  opacity: 25%;
+}
+
+.circle {
+  position:absolute;
+  top:10%;
+  right: 25%;
+  z-index: 2;
+  width: 25px;
+  height: 25px;
+  background: var(--bluefont-bg);
+  border-radius: 50%;
+  opacity: 25%;
+}
+.circle2 {
+  position:absolute;
+  bottom:5%;
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  background: var(--bluefont-bg);
+  border-radius: 50%;
+  opacity: 25%;
+}
+
+.square {
+  position:absolute;
+  bottom:30%;
+  left: 15%;
+  z-index: 2;
+  width: 15px;
+  height: 15px;
+  background: var(--bluefont-bg);
+  opacity: 25%;
+  transform: rotate(-30deg);
+}
+
+
+
+.reveal-container{
+  transition: transform 1s, opacity 0.5s;
+}
+.reveal-container.revealleft{
+  transform: translateX(-200px);
+  opacity: 0;
+}
+.reveal-container.revealright{
+  transform: translateX(200px);
+  opacity: 0;
+}
+.reveal-container.revealtop{
+  transform: translateY(-200px);
+  opacity: 0;
+}
+.reveal-container.revealbottom{
+  transform: translateY(200px);
+  opacity: 0;
+}
+.reveal-container.active{
+  transform: translateX(0);
+  opacity: 1;
+}
+
+
 /************************************
 Section 8: Media Devices Content Styling
 ************************************/
@@ -2275,7 +2474,9 @@ Section 8: Media Devices Content Styling
   padding-bottom: 70px;
   height: fit-content;
   }
-
+  .compare{
+    margin: 0px 10px;
+  }
   #awesome-cta {
     display:none;
   }
@@ -2418,6 +2619,7 @@ Section 8: Media Devices Content Styling
   }
   
   .hero-content {
+    padding: 30px 50px;
     text-align: center;
   }
   .site-map {
@@ -2457,6 +2659,10 @@ Section 8: Media Devices Content Styling
   }
   .right {
     padding-right: 10px;
+  }
+  .circle-img {
+    height:250px;
+    width: 250px;
   }
 }
 
@@ -2524,131 +2730,4 @@ Section 8: Media Devices Content Styling
 }
 .teeter {
   animation: teeter 5s ease-in-out infinite;
-}
-
-/*
-Random Designs
-*/
-
-.topshape {
-  position:absolute;
-  width: 100%;
-  height: 100%;
-  top:0;
-  left:0;
-  z-index: -1;
-  background-color: var(--litegreyfont-bg);
-  -webkit-clip-path: polygon(64% 0, 100% 0%, 100% 100%, 26% 100%);
-  clip-path: polygon(64% 0, 100% 0%, 100% 100%, 26% 100%);
-}
-
-.landing-circle {
-  position:absolute;
-  width: 200vh;
-  height: 200vh;
-  bottom:0;
-  left: 0;
-  opacity: 50%;
-  background-color: var(--litegreyfont-bg);
-  clip-path: polygon(0 81%, 0% 100%, 66% 100%);
-}
-.landing-parallelogram {
-  position:absolute;
-  width: 100vh;
-  height: 100vh;
-  bottom:0;
-  right: 0;
-  opacity: 50%;
-  background-color: var(--litegreyfont-bg);
-  clip-path: polygon(89% 0, 100% 0%, 100% 100%, 64% 100%);
-}
-.landing-parallelogram-back {
-  position:absolute;
-  width: 110vh;
-  height: 110vh;
-  bottom:0;
-  right: 0;
-  opacity: 50%;
-  background-color: var(--litegreyfont-bg);
-  clip-path: polygon(89% 0, 100% 0%, 100% 100%, 64% 100%);
-}
-.par-img {
-  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-}
-.par-img-opp {
-  clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
-}
-
-
-.triangle-up {
-  position:absolute;
-  z-index: 2;
-  top:10%;
-  left: 30%;
-  width: 0;
-  height: 0;
-  border-left: 12.5px solid transparent;
-  border-right: 12.5px solid transparent;
-  border-bottom: 25px solid var(--bluefont-bg);
-  opacity: 50%;
-}
-
-.circle {
-  position:absolute;
-  top:10%;
-  right: 25%;
-  z-index: 2;
-  width: 25px;
-  height: 25px;
-  background: var(--bluefont-bg);
-  border-radius: 50%;
-  opacity: 50%;
-}
-.circle2 {
-  position:absolute;
-  bottom:5%;
-  left: 10%;
-  width: 20px;
-  height: 20px;
-  background: var(--bluefont-bg);
-  border-radius: 50%;
-  opacity: 50%;
-}
-
-.square {
-  position:absolute;
-  bottom:30%;
-  left: 15%;
-  z-index: 2;
-  width: 15px;
-  height: 15px;
-  background: var(--bluefont-bg);
-  opacity: 50%;
-  transform: rotate(-30deg);
-}
-
-
-
-.reveal-container{
-  transition: transform 1s, opacity 0.5s;
-}
-.reveal-container.revealleft{
-  transform: translateX(-200px);
-  opacity: 0;
-}
-.reveal-container.revealright{
-  transform: translateX(200px);
-  opacity: 0;
-}
-.reveal-container.revealtop{
-  transform: translateY(-200px);
-  opacity: 0;
-}
-.reveal-container.revealbottom{
-  transform: translateY(200px);
-  opacity: 0;
-}
-.reveal-container.active{
-  transform: translateX(0);
-  opacity: 1;
 }
