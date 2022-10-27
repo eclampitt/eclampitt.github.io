@@ -51,7 +51,7 @@ function addObserver(el, options){
 // Example usages:
 
 scrollTrigger('.scroll-reveal', {
-  rootMargin: '-100px',
+  rootMargin: '-50px',
 })
 
 
@@ -331,4 +331,3 @@ function templatedescr() {
 }
 
 */
-
