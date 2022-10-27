@@ -75,6 +75,8 @@ Section 2: Variables
     --splitcompblue:#5C85DB;
     --splitcomppink:#DB7A67;
     --greencheck:#34ef37;
+    --otherblue: #00a3d5;
+    --tabtitleclr:#777;
   }
 
 /************************************
@@ -91,17 +93,101 @@ Section 3: Fonts & Typography
 ************************************/
 /* font-family: 'Poppins', sans-serif;*/
 html *{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'poppins', sans-serif;
     scroll-behavior: smooth;
+    font-size: 14px;
+
 }
-p *{
-    line-height: 1.15;
+body {
+  background-color: #FFF;
+  color: #777;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 26px;
 }
 .giant-header {
   font-size: 6rem;
   padding: 5px 0px;
 }
 
+.h2 {
+  font-size: calc(1.325rem + .9vw)
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.text-color-dark, .text-dark {
+  color: #212529 !important;
+}
+.text-color-lite, .text-lite {
+  color: #ffffff !important;
+}
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+.text-9 {
+  font-size: 2.50em !important;
+}
+.text-5 {
+  font-size: 1.50em !important;
+}
+.line-height-7 {
+  line-height: 1.7 !important;
+}
+.text-4-5 {
+  font-size: 1.35em !important;
+}
+.line-height-9 {
+  line-height: 1.9 !important;
+}
+.text-3-4, .text-3-5 {
+  font-size: 1.1em !important;
+}
+.font-weight-bold {
+  font-weight: 700 !important;
+}
+.tab-title {
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: var(--tabtitleclr);
+}
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+p {
+  color: #777;
+  line-height: 26px;
+  margin: 0 0 20px;
+}
+.py-5 {
+  padding-top: 3rem!important;
+  padding-bottom: 3rem!important;
+}
+.px-3 {
+    padding-right: 1rem!important;
+    padding-left: 1rem!important;
+}
+.col-half-section.col-half-section-right {
+  margin-left: 0;
+  margin-right: 30px;
+}
+.col-half-section {
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  max-width: 555px;
+  margin-left: 30px;
+  margin-right: 0;
+}
 /************************************
 use for finding oversized eleemnts
 ************************************/
@@ -326,7 +412,7 @@ section {
 }
 .sub-section-header {
   height: 20vh;
-  min-height: 300px;
+  min-height: 325px;
 }
 .sub-section-content {
   min-width: 350px;
@@ -335,8 +421,9 @@ section {
   height: 100%;
   padding: 0 10px;
   display: flex;
+  text-align: center;
   flex-direction: column;
-  align-content: center;
+  align-items: center;
   justify-content: center;
   margin: 0 auto;
 }
@@ -359,6 +446,10 @@ section {
 }
 #main-cta {
   min-height: 500px;
+}
+#wwd-content {
+  padding: 5% 15% 0% 15%;  /*Top Right Bottom Left*/
+  min-height: 550px;
 }
 .sub-section-content h3, .benefit-header h3{
   font-size: 1.15rem;
@@ -439,6 +530,9 @@ section {
   z-index: 1;
   left: 0px;
   margin: 5px 0px 15px;
+}
+.dividercenter {
+  align-self: center;
 }
 .divider-vertical {
   display: inline-block;
@@ -539,11 +633,17 @@ section {
 .left-mini {
   padding-left: 50px;
 }
+.left-mid {
+  padding-left: 100px;
+}
 .left {
   padding-left: 150px;
 }
 .right-mini {
   padding-right: 50px;
+}
+.right-mid {
+  padding-right: 100px;
 }
 .right {
   padding-right: 150px;
@@ -561,12 +661,25 @@ section {
   padding-top: 80px;
   padding-bottom: 80px;
 }
+.row {
+  margin-top: calc(-1 * 1.5rem);
+  margin-right: calc(-.5 * 1.5rem);
+  margin-left: calc(-.5 * 1.5rem);
+}
 .highlight-inline{
   background: linear-gradient(to right, var(--bluefont-bg), var(--splitcompblue), var(--splitcomppink));
   color: var(--lightfont-bg);
   min-width: fit-content;
   padding:5px;
   border-radius: 5px;
+}
+.highlight-inline-lg{
+  background: linear-gradient(to right, var(--bluefont-bg), var(--splitcompblue), var(--splitcomppink));
+  color: var(--lightfont-bg);
+  min-width: fit-content;
+  padding:5px;
+  border-radius: 5px;
+  font-size: 4.75rem;
 }
 .highlight-inline-blue{
   background: linear-gradient(to right, var(--bluefont-bg), var(--splitcompblue), var(--bluefont-bg));
@@ -736,7 +849,7 @@ Section 5: Main
   height: 110vh;
   /*height: 100vh;*/
   min-height: 550px;
-  /*background: var(--med-bluefont-bg);*/
+  background: var(--lightfont-bg);
   position: relative;
   overflow-x: hidden;
 }
@@ -749,7 +862,23 @@ Section 5: Main
   position: relative;
   overflow: hidden;
 }
-
+.subheader{
+  background-color: var(--bluelitefont-bg);
+  color: var(--bluefont-bg);
+  height: 55vh;
+  /*height: 100vh;*/
+  min-height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+.subheader-content{
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+}
 .pill-button {
   background-color: var(--darkfont-bg2);
   color: var(--lightfont-bg);
@@ -947,11 +1076,16 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   border-radius: 10px;
   z-index: 4;
 }
+#who-section {
+  height: 480px;
+}
+#main-about{
+  background-color: var(--litegreyfont-bg);
+}
 .cover-img{
   left:10px;
   height: 100%;
   width: 100%;
-  border-radius: 10px;
   object-fit: cover;
   z-index: 1;
 }
@@ -1134,6 +1268,15 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
 }
 #about-cta {
   height: fit-content;
+}
+#header-cta{
+  background-color: var(--bluelitefont-bg);
+}
+.flex-horizontal{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width:100%;
 }
 .parallax {
   text-align: center;
@@ -1362,8 +1505,7 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   align-items: center;
   flex-direction: column;
   position: relative;
-  border: 2px dotted var(--bluefont-bg);
-  border-radius: 10px;
+  border: 2px solid var(--bluefont-bg);
   box-shadow: 0 0 20px 3px rgb(0 0 0 / 5%);
 }
 /*
@@ -1506,6 +1648,15 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   border-radius: 50%;
   background-color: var(--bluefont-bg);
 }
+.process-icon {
+  width: 75px;
+  height: 75px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
 .customer-img {
   height: 100px;
   width: 100px;
@@ -1519,8 +1670,10 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
 }
 .learn-more a{ 
   padding-right: 20px;
+  text-decoration: none;
+  color: inherit;
 }
-.learn-more:hover { 
+.learn-more:hover, .learn-more a:hover { 
   cursor: pointer;
   color: var(--bluefont-bg);
 }
@@ -1530,6 +1683,8 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
 .learn-more:hover > .learnarrow { 
   transition: transform 0.3s ease-out;
   transform: translateX(10px);
+  color: var(--bluefont-bg);
+
 }
 .learn-more:not( :hover ) > .learnarrow { 
   transition: transform 0.3s ease-out;
@@ -2364,13 +2519,14 @@ Random Designs
 }
 .circle2 {
   position:absolute;
-  bottom:5%;
-  left: 10%;
+  bottom:50%;
+  left: 7%;
   width: 20px;
   height: 20px;
   background: var(--bluefont-bg);
   border-radius: 50%;
   opacity: 25%;
+  z-index: 4;
 }
 
 .square {
@@ -2434,6 +2590,10 @@ Section 8: Media Devices Content Styling
   #services {
     height: fit-content;
    }
+
+  #header-cta{
+    height: fit-content;
+  }
   .service-section-half{
     padding-top: 50px;
     padding-bottom: 50px;
@@ -2466,7 +2626,10 @@ Section 8: Media Devices Content Styling
   #benefits .half-bottom{
     padding-bottom: 100px;
   }
-  #benefits {
+  #main-img {
+    padding-bottom: 0px;
+  }
+  #benefits, #who-section {
     height: fit-content;
   }
   #about, .service-section{
@@ -2653,17 +2816,26 @@ Section 8: Media Devices Content Styling
     width: 250px;
   }
   
-  .left, .left-mini {
+  .left, .left-mini, .left-mid {
     padding-left: 10px;
     
   }
-  .right {
+  .right, .right-mini, .right-mid {
     padding-right: 10px;
   }
   .circle-img {
     height:250px;
     width: 250px;
   }
+
+}
+
+/* Add a scroll bar to the Y axis side menu */
+@media only screen and (max-width: 510px) {
+  #process-tabs {
+    height: 950px;
+  }
+
 }
 
 /* Add a scroll bar to the Y axis side menu */
@@ -2730,4 +2902,223 @@ Section 8: Media Devices Content Styling
 }
 .teeter {
   animation: teeter 5s ease-in-out infinite;
+}
+@media (max-width: 575px){
+body {
+    font-size: 13px;
+}}
+
+
+
+/*About Section Styling*/
+/* Page Header */
+.page-header {
+	background-color: var(--bluefont-bg);
+	margin: 0 0 35px 0;
+	padding: 250px 0;
+  	position: relative;
+	text-align: left;
+}
+
+.page-header h1 {
+	color: #fff;
+	font-size: 30px;
+	line-height: 1;
+	margin: 0;
+	padding: 0;
+	font-weight: 400;
+	position: relative;
+	top: 1px;
+}
+
+.d-block {
+  display: block!important;
+}
+
+
+.py-3 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.mb-5 {
+  margin-bottom: 3rem;
+}
+.d-block {
+  display: block;
+}
+
+.custom-stroke-text-effect-1 {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 0.8px;
+  -webkit-text-stroke-color: var(--bluefont-bg);
+  white-space: nowrap;
+}
+
+.custom-big-text-1 {
+  font-size: 6rem;
+  line-height: 64px;
+  line-height: 4rem;
+  text-transform: uppercase;
+}
+.custom-big-text-2 {
+  font-size: 5.1rem;
+  line-height: 48px;
+  line-height: 3rem;
+  text-transform: uppercase;
+}
+
+.opacity-2 {
+	opacity: 0.2 !important;
+}
+
+
+
+/* Add a slash symbol (/) before/behind each list item */
+.breadcrumb > li + li:before {
+  color: inherit;
+  opacity: 0.5;
+  color: var(--greyfont-bg);
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  content: "\f105";
+  padding: 0 7px 0 5px;
+}
+
+.breadcrumb .active {
+  opacity: 0.7;
+}
+.breadcrumb > li {
+  display: inline-block;
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  text-shadow: none;
+}
+li {
+  line-height: 24px;
+}
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: var(--greyfont-bg);
+  text-decoration: none;
+  opacity: 0.5;
+
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  text-decoration: underline;
+}
+.breadcrumb {
+  padding-top: 100px;
+}
+
+.custom-svg-style-1 {
+background-color: #ffffff;
+position: absolute;
+top: 0;
+width: 100vw;
+height: 100%;
+left: 50%;
+transform: translate3d(-50%, 0, 0);
+}
+
+
+
+/*
+ CSS tab info https://codepen.io/markcaron/pen/MvGRYV
+*/
+.tabset > input[type="radio"] {
+  position: absolute;
+  left: -200vw;
+}
+
+.tabset .tab-panel {
+  display: none;
+}
+
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+  display: block;
+}
+
+/*
+ Styling
+*/
+
+.tabset > label {
+  position: relative;
+  display: inline-block;
+  padding: 60px 15px 25px;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+
+
+.tabset > label:hover,
+.tabset > input:focus + label {
+  color: var(--bluefont-bg);
+}
+
+.tabset > label:hover::after,
+.tabset > input:focus + label::after,
+.tabset > input:checked + label::after {
+  background:  var(--bluefont-bg);
+}
+
+.tabset > input:checked + label {
+  border-bottom: 1px solid var(--bluefont-bg);
+  margin-bottom: -1px;
+}
+
+.tab-panel {
+  padding: 30px 0;
+  border-top: 1px solid #e7e7e7;
+}
+.tab-panel a{
+  color: inherit;
+}
+
+.tabset {
+  text-align: center;
+}
+
+
+.testimonial {
+  position: relative;
+}
+.testimonial blockquote:before {
+  font-family: Georgia, serif;
+  content: '\201C';
+  font-size: 7.5em;
+  font-weight: 700;
+  opacity: .3;
+  position: absolute;
+  top: -60px;
+  left: 40px;    
+  text-shadow: none;
+  color: var(--darkfont-bg);
+}
+.testimonial blockquote:after {
+  font-family: Georgia, serif;
+  content: '\201C';
+  transform: scaleY(-1) scaleX(-1);
+  font-size: 7.5em;
+  font-weight: 700;
+  opacity: .3;
+  position: absolute;
+  top: -60px;
+  right: 40px;    
+  text-shadow: none;
+  color: var(--darkfont-bg);
+}
+.testimonial blockquote p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2em;
 }
