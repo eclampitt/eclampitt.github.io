@@ -125,7 +125,7 @@ body {
 .text-color-lite, .text-lite {
   color: #ffffff !important;
 }
-.mb-4 {
+.mb-4, .mb-4-header {
   margin-bottom: 1.5rem !important;
 }
 .text-9 {
@@ -411,7 +411,7 @@ section {
   height: 10vh;
 }
 .sub-section-header {
-  height: 20vh;
+  height: 15vh;
   min-height: 325px;
 }
 .sub-section-content {
@@ -639,6 +639,9 @@ section {
 .left {
   padding-left: 150px;
 }
+.left-xl {
+  padding-left: 200px;
+}
 .right-mini {
   padding-right: 50px;
 }
@@ -647,6 +650,9 @@ section {
 }
 .right {
   padding-right: 150px;
+}
+.right-xl {
+  padding-right: 200px;
 }
 .top {
   padding-top: 50px;
@@ -677,7 +683,7 @@ section {
   background: linear-gradient(to right, var(--bluefont-bg), var(--splitcompblue), var(--splitcomppink));
   color: var(--lightfont-bg);
   min-width: fit-content;
-  padding:5px;
+  padding:2px;
   border-radius: 5px;
   font-size: 4.75rem;
 }
@@ -1069,6 +1075,19 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   height: 200px;
   width: 500px;
 }
+.about-img-container {
+  height: 200px;
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quarter-img {
+  height: 200px;
+  width: 350px;
+  object-fit: cover;
+}
 .half-img {
   height: 500px;
   width: 400px;
@@ -1389,8 +1408,10 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   position:relative;
   z-index: 1;
 }
-
-.quote-container h1::before {
+.quote-container h2{
+  color: var(--lightfont-bg);
+}
+.quote-container h2::before {
   font-family: Georgia, serif;
   content: '\201C';
   color: var(--lightfont-bg);
@@ -1497,15 +1518,14 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
 .sixth-horizontal {
   margin: 0 auto;
   grid-column: span 1;
-  height: 250px;
-  width: 450px;
+  height: 525px;
+  width: 400px;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   position: relative;
-  border: 2px solid var(--bluefont-bg);
   box-shadow: 0 0 20px 3px rgb(0 0 0 / 5%);
 }
 /*
@@ -1620,11 +1640,14 @@ https://codepen.io/DuskoStamenic/pen/ZEvBKdw
   display: flex;
   flex-direction: column;
   align-content: center;
-  justify-content: center;
+  justify-content: top;
   height: 100%;
   color: var(--greyfont-bg);
   line-height: 1.5;
-  margin-left: 5px;
+  padding-top: 20px;
+}
+.customer-info p{
+  padding: 0px 20px 0px;
 }
 #service1 .customer-info{
   justify-content: center;
@@ -2373,7 +2396,6 @@ Section 7: Testing Step container
   height: 50%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
 }
 
@@ -2383,6 +2405,68 @@ Section 7: Testing Step container
 
 #services {
   position: relative;
+}
+
+
+/************************************
+Inline Form
+************************************/
+/* Style the form - display items horizontally */
+.form-inline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+/* Add some margins for each label */
+.form-inline label {
+  margin: 5px 10px 5px 0;
+  color:var(--bluefont-bg);
+}
+
+/* Style the input fields */
+.form-inline input {
+  vertical-align: middle;
+  margin: 5px 60px 5px 0;
+  padding: 12px;
+  background-color: #fff;
+  border: 1px solid var(--litegreyfont2-bg); /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  width: 300px;
+}
+
+/* Style the submit button */
+.form-inline button {
+  background-color: var(--darkfont-bg);
+  color: var(--lightfont-bg);
+  border: none;
+  height: 45px;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 50px;
+  white-space: nowrap;
+  margin: 10px 0px;
+}
+
+.form-inline button:hover {
+  background-color: var(--litegreyfont-bg);
+  color: var(--darkfont-bg);
+  border: 1px solid var(--darkfont-bg);
+}
+
+/* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
+@media (max-width: 800px) {
+  .form-inline input {
+    margin: 10px 0;
+  }
+
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
 
 
@@ -2519,8 +2603,8 @@ Random Designs
 }
 .circle2 {
   position:absolute;
-  bottom:50%;
-  left: 7%;
+  bottom:20%;
+  left: 5%;
   width: 20px;
   height: 20px;
   background: var(--bluefont-bg);
@@ -2568,6 +2652,231 @@ Random Designs
 }
 
 
+
+
+
+
+/*About Section Styling*/
+/* Page Header */
+.page-header {
+	background-color: var(--bluefont-bg);
+	margin: 0 0 35px 0;
+	padding: 250px 0;
+  	position: relative;
+	text-align: left;
+}
+
+.page-header h1 {
+	color: #fff;
+	font-size: 30px;
+	line-height: 1;
+	margin: 0;
+	padding: 0;
+	font-weight: 400;
+	position: relative;
+	top: 1px;
+}
+
+.d-block {
+  display: block!important;
+}
+
+
+.py-3 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.mb-5 {
+  margin-bottom: 3rem;
+}
+.d-block {
+  display: block;
+}
+
+.custom-stroke-text-effect-1 {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: var(--bluefont-bg);
+  white-space: nowrap;
+}
+
+.custom-big-text-1 {
+  font-size: 6rem;
+  line-height: 64px;
+  line-height: 4rem;
+  text-transform: uppercase;
+}
+.custom-big-text-2 {
+  font-size: 5.1rem;
+  line-height: 48px;
+  line-height: 3rem;
+  text-transform: uppercase;
+}
+
+.opacity-2 {
+	opacity: 0.2 !important;
+}
+
+
+
+/* Add a slash symbol (/) before/behind each list item */
+.breadcrumb > li + li:before {
+  color: inherit;
+  opacity: 0.5;
+  color: var(--greyfont-bg);
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  content: "\f105";
+  padding: 0 7px 0 5px;
+}
+
+.breadcrumb .active {
+  opacity: 0.7;
+}
+.breadcrumb > li {
+  display: inline-block;
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  text-shadow: none;
+}
+li {
+  line-height: 24px;
+}
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: var(--greyfont-bg);
+  text-decoration: none;
+  opacity: 0.5;
+
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  text-decoration: underline;
+}
+.breadcrumb {
+  padding-top: 100px;
+}
+
+.custom-svg-style-1 {
+background-color: #ffffff;
+position: absolute;
+top: 0;
+width: 100vw;
+height: 100%;
+left: 50%;
+transform: translate3d(-50%, 0, 0);
+}
+
+
+
+/*
+ CSS tab info https://codepen.io/markcaron/pen/MvGRYV
+*/
+.tabset > input[type="radio"] {
+  position: absolute;
+  left: -200vw;
+}
+
+.tabset .tab-panel {
+  display: none;
+}
+
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+  display: block;
+}
+
+/*
+ Styling
+*/
+
+.tabset > label {
+  position: relative;
+  display: inline-block;
+  padding: 60px 15px 25px;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+
+
+.tabset > label:hover,
+.tabset > input:focus + label {
+  color: var(--bluefont-bg);
+}
+
+.tabset > label:hover::after,
+.tabset > input:focus + label::after,
+.tabset > input:checked + label::after {
+  background:  var(--bluefont-bg);
+}
+
+.tabset > input:checked + label {
+  border-bottom: 1px solid var(--bluefont-bg);
+  margin-bottom: -1px;
+}
+
+.tab-panel {
+  padding: 30px 100px;
+  border-top: 1px solid #e7e7e7;
+}
+
+.tab-panel a{
+  color: inherit;
+}
+
+.tabset {
+  text-align: center;
+}
+
+
+.testimonial {
+  position: relative;
+}
+.testimonial blockquote:before {
+  font-family: Georgia, serif;
+  content: '\201C';
+  font-size: 7.5em;
+  font-weight: 700;
+  opacity: .3;
+  position: absolute;
+  top: -80px;
+  left: 40px;    
+  text-shadow: none;
+  color: var(--darkfont-bg);
+}
+.testimonial blockquote:after {
+  font-family: Georgia, serif;
+  content: '\201C';
+  transform: scaleY(-1) scaleX(-1);
+  font-size: 7.5em;
+  font-weight: 700;
+  opacity: .3;
+  position: absolute;
+  top: -20px;
+  right: 40px;    
+  text-shadow: none;
+  color: var(--darkfont-bg);
+}
+.testimonial blockquote p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2em;
+}
+
+
+
+
+
+
+
+
 /************************************
 Section 8: Media Devices Content Styling
 ************************************/
@@ -2612,7 +2921,6 @@ Section 8: Media Devices Content Styling
     flex-direction: column;
     height:30%;
     width: 100%;
-    padding-top: 100px;
     padding-bottom: 50px;
     justify-content: end;
   }
@@ -2629,7 +2937,7 @@ Section 8: Media Devices Content Styling
   #main-img {
     padding-bottom: 0px;
   }
-  #benefits, #who-section {
+  #benefits, #who-section, #form-section {
     height: fit-content;
   }
   #about, .service-section{
@@ -2644,7 +2952,10 @@ Section 8: Media Devices Content Styling
     display:none;
   }
   .sixth-horizontal {
-    width: 350px;
+    width: 300px;
+  }
+  .quarter-img {
+    width: 250px;
   }
 }
 
@@ -2684,9 +2995,28 @@ Section 8: Media Devices Content Styling
   .package {
    margin-top: 40px;
   }
+  #process-tabs {
+    height: 700px;
+  }
+  .tab-panel {
+    padding: 30px 50px;
+  }
+  
 }
 
 @media only screen and (max-width: 900px) {
+  .custom-big-text-1 {
+    font-size: 3rem;
+  }
+  .custom-big-text-2 {
+    font-size: 2.8rem;
+  }
+  .mb-4-header {
+    margin-bottom: 0rem !important;
+  }
+  .highlight-inline-lg{
+    font-size: 2rem;
+  }
   .cards {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
     grid-auto-rows: minmax(200px, auto);
@@ -2816,11 +3146,11 @@ Section 8: Media Devices Content Styling
     width: 250px;
   }
   
-  .left, .left-mini, .left-mid {
+  .left, .left-mini, .left-mid, .left-xl {
     padding-left: 10px;
     
   }
-  .right, .right-mini, .right-mid {
+  .right, .right-mini, .right-mid, .right-xl {
     padding-right: 10px;
   }
   .circle-img {
@@ -2828,14 +3158,26 @@ Section 8: Media Devices Content Styling
     width: 250px;
   }
 
+  .testimonial blockquote:after {
+    top: 20px;
+    right: 20px;    
+  }
+  .quote-container h1::before {
+    top: -20px;
+    left: -20px;    
+    font-size: 2em;
+  }
+
 }
 
-/* Add a scroll bar to the Y axis side menu */
 @media only screen and (max-width: 510px) {
   #process-tabs {
     height: 950px;
   }
-
+  .tab-panel {
+    padding: 30px 20px;
+  }
+  
 }
 
 /* Add a scroll bar to the Y axis side menu */
@@ -2908,217 +3250,3 @@ body {
     font-size: 13px;
 }}
 
-
-
-/*About Section Styling*/
-/* Page Header */
-.page-header {
-	background-color: var(--bluefont-bg);
-	margin: 0 0 35px 0;
-	padding: 250px 0;
-  	position: relative;
-	text-align: left;
-}
-
-.page-header h1 {
-	color: #fff;
-	font-size: 30px;
-	line-height: 1;
-	margin: 0;
-	padding: 0;
-	font-weight: 400;
-	position: relative;
-	top: 1px;
-}
-
-.d-block {
-  display: block!important;
-}
-
-
-.py-3 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-.mb-5 {
-  margin-bottom: 3rem;
-}
-.d-block {
-  display: block;
-}
-
-.custom-stroke-text-effect-1 {
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 0.8px;
-  -webkit-text-stroke-color: var(--bluefont-bg);
-  white-space: nowrap;
-}
-
-.custom-big-text-1 {
-  font-size: 6rem;
-  line-height: 64px;
-  line-height: 4rem;
-  text-transform: uppercase;
-}
-.custom-big-text-2 {
-  font-size: 5.1rem;
-  line-height: 48px;
-  line-height: 3rem;
-  text-transform: uppercase;
-}
-
-.opacity-2 {
-	opacity: 0.2 !important;
-}
-
-
-
-/* Add a slash symbol (/) before/behind each list item */
-.breadcrumb > li + li:before {
-  color: inherit;
-  opacity: 0.5;
-  color: var(--greyfont-bg);
-  font-family: 'Font Awesome 6 Free';
-  font-weight: 900;
-  content: "\f105";
-  padding: 0 7px 0 5px;
-}
-
-.breadcrumb .active {
-  opacity: 0.7;
-}
-.breadcrumb > li {
-  display: inline-block;
-  font-size: 0.5rem;
-  text-transform: uppercase;
-  text-shadow: none;
-}
-li {
-  line-height: 24px;
-}
-/* Add a color to all links inside the list */
-ul.breadcrumb li a {
-  color: var(--greyfont-bg);
-  text-decoration: none;
-  opacity: 0.5;
-
-}
-
-/* Add a color on mouse-over */
-ul.breadcrumb li a:hover {
-  text-decoration: underline;
-}
-.breadcrumb {
-  padding-top: 100px;
-}
-
-.custom-svg-style-1 {
-background-color: #ffffff;
-position: absolute;
-top: 0;
-width: 100vw;
-height: 100%;
-left: 50%;
-transform: translate3d(-50%, 0, 0);
-}
-
-
-
-/*
- CSS tab info https://codepen.io/markcaron/pen/MvGRYV
-*/
-.tabset > input[type="radio"] {
-  position: absolute;
-  left: -200vw;
-}
-
-.tabset .tab-panel {
-  display: none;
-}
-
-.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
-.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
-.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
-.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
-.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
-.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
-  display: block;
-}
-
-/*
- Styling
-*/
-
-.tabset > label {
-  position: relative;
-  display: inline-block;
-  padding: 60px 15px 25px;
-  border: 1px solid transparent;
-  border-bottom: 0;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-
-
-.tabset > label:hover,
-.tabset > input:focus + label {
-  color: var(--bluefont-bg);
-}
-
-.tabset > label:hover::after,
-.tabset > input:focus + label::after,
-.tabset > input:checked + label::after {
-  background:  var(--bluefont-bg);
-}
-
-.tabset > input:checked + label {
-  border-bottom: 1px solid var(--bluefont-bg);
-  margin-bottom: -1px;
-}
-
-.tab-panel {
-  padding: 30px 0;
-  border-top: 1px solid #e7e7e7;
-}
-.tab-panel a{
-  color: inherit;
-}
-
-.tabset {
-  text-align: center;
-}
-
-
-.testimonial {
-  position: relative;
-}
-.testimonial blockquote:before {
-  font-family: Georgia, serif;
-  content: '\201C';
-  font-size: 7.5em;
-  font-weight: 700;
-  opacity: .3;
-  position: absolute;
-  top: -60px;
-  left: 40px;    
-  text-shadow: none;
-  color: var(--darkfont-bg);
-}
-.testimonial blockquote:after {
-  font-family: Georgia, serif;
-  content: '\201C';
-  transform: scaleY(-1) scaleX(-1);
-  font-size: 7.5em;
-  font-weight: 700;
-  opacity: .3;
-  position: absolute;
-  top: -60px;
-  right: 40px;    
-  text-shadow: none;
-  color: var(--darkfont-bg);
-}
-.testimonial blockquote p {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.2em;
-}
