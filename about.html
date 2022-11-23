@@ -69,36 +69,59 @@
     <h1>Dinner Club</h1>
   </div>
 
-  <section class="full-section">
-        <div id="form">
-          <div class="form-info">
-            <div class="form-header">
-              <h5>Send Us a Message</h5>
-            </div>
+<section class="about">
+<div> 
+  
+  <div class="divider">
+    <h5>About</h5>
+  </div>
+  <p>Dinner Club is a food blog created by two sisters, Tess and Emily. 
+    This all began when Tess mentioned how hard it was to cook recipes for only one person and how we should start 
+    cooking meals together. Dinner Club started as a way for 
+    us to not only spend quality time together but to also share a meal with someone we loved and learn new recipes together. We 
+    both alternate hosting Dinner Club and every week we are both asked by friends and family what we are cooking for one and other. 
+    This website was designed for us to document what we've cooked so far and share the recipes that we've tested with others. 
+    Recipes on this website are both recipes that we've created from scratch as well as recipes that we've tried from other sites. 
+    Anyways, thank you for stopping by our blog, we hope that you enjoy our cooking adventures and looking over our recipes! 
+  </p>
 
-            <form id="contact-form" name="contact-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?" method="post">
-              <label for="fname">First Name</label>
-              <input type="text" name="firstname" placeholder="Your First Name..." required>
-          
-              <label for="lname">Last Name</label>
-              <input type="text" name="lastname" placeholder="Your Last Name..." required>
-    
-              <label for="femail">Email</label>
-              <input type="text" name="email" placeholder="Email..." required>
-          
-              <label for="subject">Subject</label>
-              <textarea name="subject" placeholder="Let's Swap Recipes!..." style="height: 180px;" required></textarea>
-              
-              <div class="g-recaptcha" data-sitekey="6LdIuA8jAAAAAHXL4xxeOtkrAtilQuGNTBHbiwZ0" data-callback="callback" data-callback="enableBtn"></div>
+</div>
+</section>
 
-              <button class="contact-button" type="submit" name="submit" id="submit-button">Submit</button>
+<section class="about-me">
+<div class="half-card"> 
+  <div class="weekly-recipe">
+    <h6 class="pyb-2">The Chef</h6>
+    <h1 class="pyb-2">Emily</h1>
+    <p>Insert Bio
+    </p>
+  </div> 
+  <div class="weekly-recipe-img">
+    <img src="images/family.jpg" alt="Dinner Club Family" class="weekly-recipe-img">
+  </div>
+</div>
+</div>
+</section>
 
-            </form>
-            
-          </div>
+<section class="about-me">
+  <div class="half-card"> 
+    <div class="weekly-recipe-img">
+      <img src="images/family.jpg" alt="Dinner Club Family" class="weekly-recipe-img">
+    </div>
+    <div class="weekly-recipe">
+      <h6 class="pyb-2">The Baker</h6>
+      <h1 class="pyb-2">Tess</h1>
+      <p>Insert Bio
+      </p>
+    </div> 
+  </div>
+  </div>
+</section>
 
-        </div>
-  </section>
+
+<section>
+  
+</section>
 
   
 </main>
@@ -156,57 +179,6 @@
 <script src="C:\Users\eclampitt\OneDrive - DMI\Desktop\Documents\Code_Academy\Emily\DinnerClub\js\java.js"></script>
 <script src="js\java.js"></script>
 
+
 </body>
 </html>
-
-<!-- 
-<?php
-
-if(isset($_POST["submit"])) {
-    $fname = $_POST["firstname"];
-    $lname = $_POST["lastname"];
-    $email = $_POST["email"];
-    $subject = $_POST["subject"];
-    $recaptcha = $_POST['g-recaptcha-response'];
-
-    // Form validation
-    if(!empty($fname) && !empty($lname) && !empty($email) && !empty($subject)){
-
-        // reCAPTCHA validation
-        if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) {
-
-            // Google secret API
-            $secretAPIkey = '6LdIuA8jAAAAADBeKNiHkLCjgd9K-NsmzYvH3-Mp';
-            // reCAPTCHA response verification
-            $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretAPIkey.'&response='.$_POST['g-recaptcha-response']);
-            // Decode JSON data
-            $response = json_decode($verifyResponse);
-                if($response->success){
-                    $toMail = "contact@bluehoundweb.com";
-                    $header = "From: " . $fname . "<". $email .">\r\n";
-                    mail($toMail, "Contact Inquiry for website", $subject, $header);
-                    $response = array(
-                        "status" => "alert-success",
-                        "message" => "Your inquiry has been sent."
-                    );
-                } else {
-                    $response = array(
-                        "status" => "alert-danger",
-                        "message" => "Robot verification failed, please try again."
-                    );
-                }       
-        } else{ 
-            $response = array(
-                "status" => "alert-danger",
-                "message" => "Please check on the reCAPTCHA box."
-            );
-        } 
-    }  else{ 
-        $response = array(
-            "status" => "alert-danger",
-            "message" => "Please fill in all required fields."
-        );
-    }
-}  
-?>
--->

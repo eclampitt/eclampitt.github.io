@@ -65,42 +65,15 @@
   </header>
 
 <main>
-  <div class="website-header">
-    <h1>Dinner Club</h1>
+  <section class="subscription-confirmation">
+  <div class="subscription-header">
+    <h1>Thank you for Subscribing!</h1>
   </div>
 
-  <section class="full-section">
-        <div id="form">
-          <div class="form-info">
-            <div class="form-header">
-              <h5>Send Us a Message</h5>
-            </div>
-
-            <form id="contact-form" name="contact-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?" method="post">
-              <label for="fname">First Name</label>
-              <input type="text" name="firstname" placeholder="Your First Name..." required>
-          
-              <label for="lname">Last Name</label>
-              <input type="text" name="lastname" placeholder="Your Last Name..." required>
-    
-              <label for="femail">Email</label>
-              <input type="text" name="email" placeholder="Email..." required>
-          
-              <label for="subject">Subject</label>
-              <textarea name="subject" placeholder="Let's Swap Recipes!..." style="height: 180px;" required></textarea>
-              
-              <div class="g-recaptcha" data-sitekey="6LdIuA8jAAAAAHXL4xxeOtkrAtilQuGNTBHbiwZ0" data-callback="callback" data-callback="enableBtn"></div>
-
-              <button class="contact-button" type="submit" name="submit" id="submit-button">Submit</button>
-
-            </form>
-            
-          </div>
-
-        </div>
+  <div class="subscribe-button-block">
+      <a class="subscribe-button" href="./index.html">Home</a>
+    </div>
   </section>
-
-  
 </main>
 
 <!--Project Footer-->
@@ -159,54 +132,19 @@
 </body>
 </html>
 
-<!-- 
-<?php
 
-if(isset($_POST["submit"])) {
-    $fname = $_POST["firstname"];
-    $lname = $_POST["lastname"];
-    $email = $_POST["email"];
-    $subject = $_POST["subject"];
-    $recaptcha = $_POST['g-recaptcha-response'];
+<?php 
 
-    // Form validation
-    if(!empty($fname) && !empty($lname) && !empty($email) && !empty($subject)){
+if(isset($_POST['submit'])){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
 
-        // reCAPTCHA validation
-        if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) {
+    $mailTo = 'contact@dinnerclubrecipes.com';
+    $headers = "From: ".$email;
+    $txt = "you have received a subscription request";
 
-            // Google secret API
-            $secretAPIkey = '6LdIuA8jAAAAADBeKNiHkLCjgd9K-NsmzYvH3-Mp';
-            // reCAPTCHA response verification
-            $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretAPIkey.'&response='.$_POST['g-recaptcha-response']);
-            // Decode JSON data
-            $response = json_decode($verifyResponse);
-                if($response->success){
-                    $toMail = "contact@bluehoundweb.com";
-                    $header = "From: " . $fname . "<". $email .">\r\n";
-                    mail($toMail, "Contact Inquiry for website", $subject, $header);
-                    $response = array(
-                        "status" => "alert-success",
-                        "message" => "Your inquiry has been sent."
-                    );
-                } else {
-                    $response = array(
-                        "status" => "alert-danger",
-                        "message" => "Robot verification failed, please try again."
-                    );
-                }       
-        } else{ 
-            $response = array(
-                "status" => "alert-danger",
-                "message" => "Please check on the reCAPTCHA box."
-            );
-        } 
-    }  else{ 
-        $response = array(
-            "status" => "alert-danger",
-            "message" => "Please fill in all required fields."
-        );
-    }
-}  
+    mail($mailTo,"Newsletter Subscription",$txt,$headers);
+}
+
 ?>
--->
+ 
